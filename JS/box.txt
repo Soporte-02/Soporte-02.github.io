@@ -1,0 +1,834 @@
+Este es el primer buscador que funciona con el ID pero solo encuentra 1
+
+/*document.addEventListener('DOMContentLoaded', function() {
+    const searchForm = document.getElementById('productSearchForm');
+    const searchInput = document.getElementById('searchInput');
+
+    searchForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        const productIds = [
+            'cremoso-vainilla-1-step',
+            'brownie',
+            'buñuelos',
+            'butter-moist',
+            'cheesecake-de-frambueza',
+            
+            'chocolate-delvis-1-2-3',
+            'chocolate-holandes',
+            'chocolate-ultra-1-step',
+            'chocolate-y-vainilla',
+            'concha-de-corazon',
+            'conchas-integral',
+            'cream-cake-chocolate-hr',
+            'cream-cake-chocolate',
+            'cream-cake-clasico-vainilla',
+            'cream-cake-clasico-chocolate',
+            'cream-cake-vainilla-hr',
+            'crema-especial-chocolate',
+            'crema-especial-vainilla',
+            'crema-pastelera-frio',
+            'crema-pastelera-miltra',
+            'cremoso-chocolate-1-Step',
+            'cremoso-vainilla',
+            'deleite-chocolate',
+            'delvis-vainilla-dleite',
+            'donas-integral',
+            'esponja-chocolate',
+            'esponja-de-vainilla',
+            'galletas-integral',
+            'galletas-red-velvet',
+            'harina-satin-cream-cake',
+            'mix-retencion-chocolate',
+            'mix-retencion-vainilla',
+            'merengue-richs',
+            'mix-crepas',
+            'mix-esponja-lacteo',
+            'mix-vainilla-amarilla',
+            'mix-vainilla-ultra',
+            'mix-zanahoria',
+            'mix-deleite-chocolate',
+            'pan-de muerto-chocolate',
+            'pan-de muertos',
+            'panettone',
+            'panqueletas-integral',
+            'pastel-amarillo-1-2-3',
+            'pastel-de-frutos-secos',
+            'pastel-red-velvet',
+            'red-velvet',
+            'rosca-de-reyes',
+            'suggar-free',
+            'vainilla-cremoso',
+        ];
+        
+                // 1. Eliminar cualquier resaltado anterior
+        const previouslyHighlighted = document.querySelector('.highlight');
+        if (previouslyHighlighted) {
+            previouslyHighlighted.classList.remove('highlight');
+        }
+
+        // 2. Buscar el producto
+        const foundProduct = productIds.find(id => id.includes(searchTerm));
+
+        if (foundProduct) {
+            // 3. Redirigir a la ancla
+            window.location.href = '#' + foundProduct;
+
+            // 4. Resaltar el producto encontrado
+            const productElement = document.getElementById(foundProduct);
+            if (productElement) { // Asegurarse de que el elemento existe
+                productElement.classList.add('highlight'); // Añadir la clase CSS 'highlight'
+            }
+
+        } else {
+            alert('Producto no encontrado.');
+        }
+
+    });
+
+    // Opcional: Quitar el resaltado si el usuario navega fuera del ancla con el scroll
+    // Esto es un poco más avanzado y puede no ser necesario para todos los casos
+    window.addEventListener('hashchange', function() {
+        // Eliminar resaltado si el hash cambia y no coincide con el resaltado actual
+        const currentHash = window.location.hash.substring(1); // Obtiene el ID sin el '#'
+        const previouslyHighlighted = document.querySelector('.highlight');
+        
+        if (previouslyHighlighted && previouslyHighlighted.id !== currentHash) {
+            previouslyHighlighted.classList.remove('highlight');
+        }
+    });
+
+    // Opcional: Si la página carga con un hash en la URL, resaltar ese elemento
+    if (window.location.hash) {
+        const initialHash = window.location.hash.substring(1);
+        const initialElement = document.getElementById(initialHash);
+        if (initialElement) {
+            initialElement.classList.add('highlight');
+        }
+    }
+});
+*/
+
+/****************Recetas table********************/
+ <center>
+            <table class="tbr">
+                <tr>
+                    <th>
+                        <div id="cremoso-vainilla-1-step">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Cremoso%20vainilla%201%20step.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Cremoso%20Vainilla%201%20Step.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="brownie">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20brownie.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Brownie.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="butter-moist">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Butter%20Moist.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Butter%20Moist.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        <div id="buñuelos">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20bu%C3%B1uelos%20de%20viento.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Bu%C3%B1uelos.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="cheesecake-de-frambueza">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Cheesecake%20Frambueza.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Cheesecake%20de%20Frambueza.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="vainilla-cremoso">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Vainilla%20cremoso.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Vainilla%20Cremoso.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        <div id="chocolate-delvis-1-2-3">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Chocolate%20delvis%201-2-3.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Chocolate%20Delvis%201-2-3.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="chocolate-holandes">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Chocolate%20holandes.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Chocolate%20Holand%C3%A9s.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="chocolate-ultra-1-step">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Chocolate%201%20step%20Ultra.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Chocolate%20Ultra%201%20Step.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        <div id="chocolate-y-vainilla">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Chocolate%20y%20vainilla.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Chocolate%20y%20Vainilla.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="concha-de-corazon">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/RECETA%20CONCHAS%20CORAZON.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Concha%20de%20corazon.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="conchas-integral">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Conchas%20Integral.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Conchas%20Integral.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        <div id="cream-cake-chocolate-hr">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Recetas%20Chocolate%20HR.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Cream%20Cake%20Chocolate%20HR.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="cream-cake-chocolate">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Cream%20Cake%20Chocolate.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Cream%20Cake%20Chocolate.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="cream-cake-clasico-vainilla">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Cream%20Cake%20clasico%20vainilla.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Cream%20Cake%20Clasico%20Vainilla.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        <div id="cream-cake-clasico-chocolate">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Cream%20Cake%20clasico%20chocolate.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Cream%20Cake%20Cl%C3%A1sico%20Chocolate.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="cream-cake-vainilla-hr">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Vainilla%20HR.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Cream%20Cake%20Vainilla%20HR.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="crema-especial-chocolate'">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Crema%20especial.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Crema%20Especial%20Chocolate.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        <div id="crema-especial-vainilla">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Crema%20especial%20vainilla.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Crema%20Especial%20Vainilla.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="crema-pastelera-frio">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Crema%20pastelera%20frio.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Crema%20Pastelera%20Frio.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="crema-pastelera-miltra">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Crema%20pastelera%20miltra.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Crema%20Pastelera%20Miltra.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        <div id="cremoso-chocolate-1-Step">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Chocolate%20cremoso%201%20step.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Cremoso%20Chocolate%201%20Step.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="cremoso-vainilla">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Cremoso%20vainilla.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Cremoso%20Vainilla.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="deleite-chocolate">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Deleite%20chocolate.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Deleite%20Chocolate.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        <div id="delvis-vainilla-deleite">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Deleite%20Vainilla.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Delvis%20Vainilla.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="donas-integral">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Donas%20Integral.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Donas%20Integral.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="esponja-chocolate">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Esponja%20de%20chocolate.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Esponja%20Chocolate.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        <div id="esponja-de-vainilla">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Esponja%20vainilla.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Esponja%20de%20Vainilla.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="galletas-integral">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Galletas%20Integral.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Galletas%20Integral.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="galletas-red-velvet">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Galletas%20red%20velvet.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Galletas%20red%20velvet.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        <div id="harina-satin-cream-cake">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Tegral%20satin.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Harina%20Satin%20Cream%20Cake.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="mix-retencion-chocolate">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Mix%20retenci%C3%B3n%20chocolate.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Maxima%20Retencion%20Chocolate.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="mix-retencion-vainilla">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Maxima%20retencion%20vainilla.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Maxima%20Retencion%20Vainilla.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        <div id="merengue-richs">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Merengue%20rich%C2%B4s.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Merengue%20Rich%C2%B4s.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="mix-crepas">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Mix%20crepa.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Mix%20Crepas.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="mix-esponja-lacteo">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Mix%20esponja%20lacteo.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Mix%20Esponja%20Lacteo.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        <div id="mix-vainilla-amarilla">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Vainilla%20Amarilla.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Mix%20Vainilla%20Amarilla.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="mix-vainilla-ultra">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Mix%20vainilla%20ultra.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Mix%20Vainilla%20Ultra.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="mix-zanahoria">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Mix%20zanahoria.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Mix%20Zanahoria.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        <div id="mix-deleite-chocolate">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Mix%20deleite%20chocolate.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Mix%20deleite%20chocolate.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="pan-de muerto-chocolate">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Pan%20de%20muerto%20chocolate.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Pan%20de%20Muerto%20Chocolate.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="pan-de muertos">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Pan%20de%20muerto.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Pan%20de%20Muertos.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        <div id="panettone">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Panettone.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Panettone.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="panqueletas-integral">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Pnaqueleria%20Inegral.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Panqueletas%20Integral.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="pastel-amarillo-1-2-3">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Pastel%20amarillo%201-2-3.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Pastel%20Amarillo%201-2-3.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        <div id="pastel-red-velvet">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Pastel%20Red%20Velvet.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Pastel%20Red%20Velvet.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="pastel-de-frutos-secos">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20pastel%20de%20frutos.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Pastel%20de%20frutos%20secos.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="red-velvet">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Red%20Velvet.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Red%20Velvet.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        <div id="rosca-de-reyes">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Rosca%20de%20reyes.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Rosca%20de%20Reyes.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="">
+                            <h2></h2>
+                            <p></p>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="suggar-free">
+                            <h2></h2>
+                            <p></p>
+                            <a href="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Suggar%20free.png?raw=true">
+                                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Portada%20Suggar%20Free.png?raw=true" class="imgre">
+                            </a>
+                        </div>
+                    </th>
+                </tr>
+            </table>
+        </center>
+
+
+
+
+
+
+
+
+
+
+                    <th>
+                        <div>
+                            <button popovertarget="modal3" class="btm">
+                                <img src="Img/marcador-de-posicion.png" width="40px" height="40px">
+                                    Sucursal Cd.Valle
+                            </button>
+                            <div id="modal3" popover>
+                                <center>
+                                    <h2>Colosio</h2>
+                                </center>
+                                <center>
+                                    <p>
+                                        <h3>
+                                            Av. Universidad #65 Tepic Nayarit
+                                        </h3>
+                                        <h3>
+                                            Lunes a viernes 8:30 am -  2 pm y  3 pm – 6 pm
+                                        </h3>
+                                    
+                                            <h3>
+                                               Sábados 9am a 3pm
+                                            </h3>
+                                    </p>
+                                        <section id="map3"></section> 
+                                        <button popovertarget="modal3" class="btm1">Cerrar</button>
+                                </center>
+                            </div>
+                        </div>
+                    </th>
+
+                    <th>
+                        <div>
+                            <button popovertarget="modal1" class="btm">
+                                <img src="Img/marcador-de-posicion.png" width="40px" height="40px">
+                                    Sucursal Decoración
+                            </button>
+                            <div id="modal1" popover>
+                                <center>
+                                    <h2>Decoración</h2>
+                                </center>
+                                <center>
+                                    <p>
+                                        <h3>
+                                            León #75 Colonia: Centro Tepic Nayarit
+                                        </h3>
+                                        <h3>
+                                            Lunes a viernes 8:30 am -  3 pm y  4 pm – 6 pm
+                                        </h3>
+                                    
+                                            <h3>
+                                                Sábados 9 am a 3 p
+                                            </h3>
+                                    </p>
+                                        <section id="map1"></section> 
+                                        <button popovertarget="modal1" class="btm1">Cerrar</button>
+                                </center>
+                            </div>
+                        </div>
+                    </th>
+                    
+
+
+
+
+
+
+                     <div>
+                            <button popovertarget="modal1" class="btm">
+                                <img src="Img/Sucursales/Decoración_Mesa de trabajo 1.png" class="imgm">
+                            </button>
+                            <div id="modal1" popover>
+                                <center>
+                                    <h2>Decoración</h2>
+                                </center>
+                                <center>
+                                    <p>
+                                        <h3>
+                                            León #75 Colonia: Centro Tepic Nayarit
+                                        </h3>
+                                        <h3>
+                                            Lunes a viernes 8:30 am -  3 pm y  4 pm – 6 pm
+                                        </h3>
+                                    
+                                            <h3>
+                                                Sábados 9 am a 3 p
+                                            </h3>
+                                    </p>
+                                        <section id="map1"></section> 
+                                        <button popovertarget="modal1" class="btm1">Cerrar</button>
+                                </center>
+                            </div>
+                        </div>
+
+<style>
+.btm{
+   /* background-color: #2c32e4;
+    color: white;
+    border-radius: 10px;*/
+    background-color: transparent;
+    width: 160px;
+    height: auto;
+    font-family: ExtraBold;
+    color: #2B65A3;
+    font: bold;
+    border: 0px;
+    justify-content: center; /* Centrado horizontal de los hijos */
+   /* border-radius: 5px #000;*/
+}
+.imgm{
+    height: 100px;
+    width: 300px;
+}
+.btm:hover{
+    background-color: white;
+    color: #000;
+    border-radius: 10px;
+    height: 100px;
+    width: 300px;
+}
+
+</style>
+
+
+<div>
+            <marquee direction="left">
+                 <div>
+                            <button popovertarget="modal1" class="btm3">
+                                <img src="Img/Sucursales/Decoración_Mesa de trabajo 1.png" width="450px" height="200px"> 
+                            </button>
+                            <div id="modal1" popover>
+                                <center>
+                                    <h2>Decoración</h2>
+                                </center>
+                                <center>
+                                    <p>
+                                        <h3>
+                                            León #75 Colonia: Centro Tepic Nayarit
+                                        </h3>
+                                        <h3>
+                                            Lunes a viernes 8:30 am -  3 pm y  4 pm – 6 pm
+                                        </h3>
+                                    
+                                            <h3>
+                                                Sábados 9 am a 3 p
+                                            </h3>
+                                    </p>
+                                        <section id="map1"></section> 
+                                        <button popovertarget="modal1" class="btm1">Cerrar</button>
+                                </center>
+                            </div>
+                        </div>
+            </marquee>
+        </div>
+
+
+        <footer class="fter-rec">
+  <center>
+    <table>
+      <tr>
+        <th>
+          <img src="Img/redes/Caritas-01.png" class="imagen-recetas1">
+        </th>
+
+        <th>
+          <img src="Img/Logo circulo nivel cursos-61.png" class="imagen-recetas">
+        </th>
+
+        <th>
+            <img src="Img/redes/Caritas-01.png" class="imagen-recetas1">
+        </th>
+      </tr>
+
+      <tr>
+        <th>
+            <h1>YA NOS SIGUES</h1>
+            <h3>EN TODAS NUESTRAS REDES</h3>>
+        </th>
+      </tr>
+
+      <tr>
+        <th>
+          <img src="Img/redes/Cuadro Instagram-01.png">
+        </th>
+
+        <th>
+          <img src="Img/redes/Cuadro face-01.png">
+        </th>
+      </tr>
+
+      <tr>
+        <th>
+          <img src="Img/redes/Cuadro Ti Tok-01.png">
+        </th>
+        <th>
+          <img src="Img/redes/Cuadro Youtube-01.png">
+        </th>
+      </tr>
+
+    </table>
+  </center>
+</footer>
