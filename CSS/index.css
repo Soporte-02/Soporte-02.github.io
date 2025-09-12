@@ -560,10 +560,9 @@ background: linear-gradient(171deg,rgba(0, 116, 199, 1) 0%, rgba(219, 217, 217, 
 }
 
 .imagen-recetasr {
-  width: 400px;
-  height: 160px;
+  width: 440px;
+  height: 150px;
   display: block;
-  border-radius: 10px; /* opcional */
 }
 
 .texto-icono {
