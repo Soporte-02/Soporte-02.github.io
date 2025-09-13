@@ -1,209 +1,89 @@
 <!DOCTYPE html>
-<head> 
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Capacillo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<script src="https://kit.fontawesome.com/181a7f6408.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin='anonymous'></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-    <meta name="viewport" content="width = 1050, user-scalable = no" />
-<meta charset="UTF-8">
-<script type="text/javascript" src="js/extras/jquery.min.1.7.js"></script>
-<script type="text/javascript" src="js/extras/modernizr.2.5.3.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capacillo</title>
-    <link rel="stylesheet" type="text/css" href="CSS/index.css">
-    <link rel="icon" href="https://github.com/Soporte-02/Soporte-02.github.io/blob/main/Img/beeimgtmp-20250730-172830.png?raw=true" />
+  <!-- Turn.js desde CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
 
+  <style>
+    body { background: #f8f9fa; }
+    .flipbook-viewport { margin: 0 auto; }
+    .flipbook {
+      width: 922px;
+      height: 600px;
+      margin: auto;
+    }
+    .flipbook div {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+    }
+  </style>
 </head>
-<body class="bodydex">
-   <section>
-        <div class="dini">
-            <center>
-                <img src="https://github.com/Soporte-02/Soporte-02.github.io/blob/main/Img/Logotipo%20El%20Nivel%20blanco-01.png?raw=true" height="120px" width="120px" class="imini" title="El Nivel">
-            </center>
-        </div>
-    </section>
-    <section class="container text-center my-4" id="sec">
-        <div>
-            <img src="https://github.com/Soporte-02/Soporte-02.github.io/blob/main/Img/Personaje%20Nivel-01.png?raw=true" class="personaje img-fluid mb-3" id="imgsec" title="Personaje Nivel">
-            <h1 id="sec">Capacillo</h1>
-            <h2 id="sec1">"Colores y tamaños"</h2>
-        </div>
-    </section><br>
+<body>
 
-    <section>
-        <div class="flipbook-viewport">
-            <div class="container">
-                <div class="flipbook">
-                    <div style="background-image:url(Img/Capacillos/Capacillos-01.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-02.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-03.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-04.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-05.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-06.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-07.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-08.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-09.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-10.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-11.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-12.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-13.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-14.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-15.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-16.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-17.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-18.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-19.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-20.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-21.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-22.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-23.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-24.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-25.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-26.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-27.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-28.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-29.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-30.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-31.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-32.png)"></div>
-                    <div style="background-image:url(Img/Capacillos/Capacillos-33.png)"></div>            
-                </div>
-            </div>
-        </div>
-    </section><br><br>
+  <section class="container text-center my-4">
+    <h1>Capacillo</h1>
+    <h2>"Colores y tamaños"</h2>
+  </section>
 
-    <footer class="fter-rec">
-  <div class="footer-container">
-      <!-- Fila de logos -->
-      <div class="contenedor-imagenes">
-        <img src="https://github.com/Soporte-02/Soporte-02.github.io/blob/main/Img/redes/Caritas-01.png?raw=true" class="img-resp">
-        <img src="https://github.com/Soporte-02/Soporte-02.github.io/blob/main/Img/Logo%20circulo%20nivel%20cursos-61.png?raw=true" title="El Nivel" class="img-resp">
-        <img src="https://github.com/Soporte-02/Soporte-02.github.io/blob/main/Img/redes/Caritas-01.png?raw=true" class="img-resp">
+  <!-- Flipbook -->
+  <section>
+    <div class="flipbook-viewport">
+      <div class="flipbook">
+        <div style="background-image:url(Img/Capacillos/Capacillos-01.png)"></div>
+        <div style="background-image:url(Img/Capacillos/Capacillos-02.png)"></div>
+        <div style="background-image:url(Img/Capacillos/Capacillos-03.png)"></div>
+        <div style="background-image:url(Img/Capacillos/Capacillos-04.png)"></div>
+        <div style="background-image:url(Img/Capacillos/Capacillos-05.png)"></div>
+        <div style="background-image:url(Img/Capacillos/Capacillos-06.png)"></div>
+        <div style="background-image:url(Img/Capacillos/Capacillos-07.png)"></div>
+        <div style="background-image:url(Img/Capacillos/Capacillos-08.png)"></div>
+        <!-- sigue con tus páginas... -->
       </div>
-      
+    </div>
+  </section>
 
-      <!-- Texto -->
-      <div class="footer-texto">
-        <h2>YA NOS SIGUES</h2>
-        <h2>EN TODAS NUESTRAS REDES</h2>
-      </div><br>
+  <script>
+    function resizeFlipbook() {
+      let winWidth = $(window).width();
+      let winHeight = $(window).height();
 
-      <!-- Redes sociales -->
-      <div class="footer-redes">
-          <div class="icono-red">
-            <a href="https://www.instagram.com/elnivel_materiasprimas?igsh=MXcydzk4cmRrbDJmZA==">
-              <img src="https://github.com/Soporte-02/Soporte-02.github.io/blob/main/Img/redes/Cuadro%20Instagram-01.png?raw=true" title="Instagram" class="imagen-recetasr">
-            </a>
-            <span class="texto-icono">elnivel_materiasprimas</span>
-        </div>
+      let bookWidth, bookHeight;
 
-        <div class="icono-red">
-          <a href=" https://www.facebook.com/share/1FQvprWTyh/">
-            <img src="https://github.com/Soporte-02/Soporte-02.github.io/blob/main/Img/redes/Cuadro%20face-01.png?raw=true" title="Facebook" class="imagen-recetasr">
-          </a>
-          <span class="texto-icono">EL NIVEL MATERIAS PRIMAS</span>
-        </div>
+      if (winWidth > 768) {
+        bookWidth = Math.min(922, Math.floor(winWidth * 0.9));
+        bookHeight = Math.min(600, Math.floor(winHeight * 0.9));
+      } else {
+        bookWidth = Math.floor(winWidth * 0.95);
+        bookHeight = Math.floor(winHeight * 0.8);
+      }
 
-        <div class="icono-red">
-          <a href="https://www.tiktok.com/@.elnivel?_t=ZS-8zfjT7k7BYN&_r=1">
-            <img src="https://github.com/Soporte-02/Soporte-02.github.io/blob/main/Img/redes/Cuadro%20Ti%20Tok-01.png?raw=true" title="TikTok" class="imagen-recetasr">
-          </a>
-          <span class="texto-icono">EL NIVEL, MATERIAS PRIMAS</span>
-        </div>
+      $(".flipbook").turn("size", bookWidth, bookHeight);
+      $(".flipbook").turn("display", (winWidth > 768 ? "double" : "single"));
+    }
 
-        <div class="icono-red">
-          <a href="https://youtube.com/@elnivelmateriasprimas631?si=PanF5JVgsyFYVxmK">
-            <img src="https://github.com/Soporte-02/Soporte-02.github.io/blob/main/Img/redes/Cuadro%20Youtube-01.png?raw=true" title="YouTube" class="imagen-recetasr">
-          </a>
-          <span class="texto-icono">@elnivelmateriasprimas631</span>
-        </div>
-      </div>
-  </div>
-</footer>
-<!-- jQuery primero -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- Turn.js desde CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
-    <script type="text/javascript">
-function resizeFlipbook() {
-  let width = Math.min(window.innerWidth * 0.9, 922);
-  let height = width * 0.65;
-  $(".flipbook").turn("size", width, height);
-}
+    $(document).ready(function () {
+      $(".flipbook").turn({
+        width: 922,
+        height: 600,
+        autoCenter: true,
+        display: ($(window).width() > 768 ? "double" : "single")
+      });
 
-$(document).ready(function () {
-  $(".flipbook").turn({
-    width: 922,
-    height: 600,
-    autoCenter: true
-  });
+      resizeFlipbook();
+      $(window).resize(resizeFlipbook);
+    });
+  </script>
 
-  resizeFlipbook();
-  $(window).resize(resizeFlipbook);
-});
-
-function loadApp() {
-  var winWidth = $(window).width();
-  var winHeight = $(window).height();
-
-  var bookWidth, bookHeight;
-
-  if (winWidth > 768) {
-    // Escritorio → dos páginas
-    bookWidth = Math.min(922, Math.floor(winWidth * 0.9));
-    bookHeight = Math.min(600, Math.floor(winHeight * 0.9));
-  } else {
-    // Móvil → una sola página más ancha
-    bookWidth = Math.floor(winWidth * 0.95);
-    bookHeight = Math.floor(winHeight * 0.8);
-  }
-
-  $('.flipbook').turn({
-    width: bookWidth,
-    height: bookHeight,
-    elevation: 50,
-    gradients: true,
-    autoCenter: true,
-    display: (winWidth > 768 ? 'double' : 'single') // 👈 clave
-  });
-}
-
-// Recalcular al redimensionar
-$(window).on('resize', function() {
-  var winWidth = $(window).width();
-  var winHeight = $(window).height();
-
-  var bookWidth, bookHeight;
-
-  if (winWidth > 768) {
-    bookWidth = Math.min(922, Math.floor(winWidth * 0.9));
-    bookHeight = Math.min(600, Math.floor(winHeight * 0.9));
-  } else {
-    bookWidth = Math.floor(winWidth * 0.95);
-    bookHeight = Math.floor(winHeight * 0.8);
-  }
-
-  $('.flipbook').turn('size', bookWidth, bookHeight);
-  $('.flipbook').turn('display', (winWidth > 768 ? 'double' : 'single'));
-});
-yepnope({
-	test : Modernizr.csstransforms,
-	yep: ['js/lib/turn.js'],
-	nope: ['js/lib/turn.html4.min.js'],
-	both: ['css/basic.css'],
-	complete: loadApp
-});
-
-</script>
-
-    <script src="Js/carta.js"></script>
-    <script src="Js/script.js"></script>
-    <script src="JS/maps.js"></script>
 </body>
 </html>
