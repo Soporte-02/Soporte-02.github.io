@@ -133,8 +133,27 @@
       </div>
   </div>
 </footer>
-
+<!-- jQuery primero -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Turn.js desde CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
     <script type="text/javascript">
+function resizeFlipbook() {
+  let width = Math.min(window.innerWidth * 0.9, 922);
+  let height = width * 0.65;
+  $(".flipbook").turn("size", width, height);
+}
+
+$(document).ready(function () {
+  $(".flipbook").turn({
+    width: 922,
+    height: 600,
+    autoCenter: true
+  });
+
+  resizeFlipbook();
+  $(window).resize(resizeFlipbook);
+});
 
 function loadApp() {
   var winWidth = $(window).width();
