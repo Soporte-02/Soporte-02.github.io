@@ -441,7 +441,6 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
    
 }
 
-
 .contenedor-imagenes {
   display: flex;
   justify-content: center; /* centra horizontal */
@@ -795,4 +794,18 @@ background: linear-gradient(171deg,rgba(0, 116, 199, 1) 0%, rgba(219, 217, 217, 
     font-size: 14px;
     padding: 8px 12px;
   }
+}
+
+/*****************CATALOGOS********************/
+.bodyca{
+    background-color:#CCCCCC;
+}
+
+.imgre1{
+    height: 300px;
+    width: 300px;
+}
+.imgre1:hover{
+   /* background-color: rgb(133, 137, 247);*/
+   background-color: rgb(255, 255, 255);
 }
