@@ -11,8 +11,9 @@
 
     <meta name="viewport" content="width = 1050, user-scalable = no" />
     <meta charset="UTF-8">
-    <script type="text/javascript" src="Js/extras/jquery.min.1.7.js"></script>
-    <script type="text/javascript" src="Js/extras/modernizr.2.5.3.min.js"></script>
+
+    <script type="text/javascript" src="JS/extras/jquery.min.1.7.js"></script>
+    <script type="text/javascript" src="JS/extras/modernizr.2.5.3.min.js"></script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -97,72 +98,39 @@
       </div>
   </div>
 </footer>
-<!-- jQuery primero -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- Turn.js desde CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
-    <script type="text/javascript">
-function resizeFlipbook() {
-  let width = Math.min(window.innerWidth * 0.9, 922);
-  let height = width * 0.65;
-  $(".flipbook").turn("size", width, height);
-}
 
-$(document).ready(function () {
-  $(".flipbook").turn({
-    width: 922,
-    height: 600,
-    autoCenter: true
-  });
-
-  resizeFlipbook();
-  $(window).resize(resizeFlipbook);
-});
+<script type="text/javascript">
 
 function loadApp() {
-  var winWidth = $(window).width();
-  var winHeight = $(window).height();
 
-  var bookWidth, bookHeight;
+	// Create the flipbook
 
-  if (winWidth > 768) {
-    // Escritorio → dos páginas
-    bookWidth = Math.min(922, Math.floor(winWidth * 0.9));
-    bookHeight = Math.min(600, Math.floor(winHeight * 0.9));
-  } else {
-    // Móvil → una sola página más ancha
-    bookWidth = Math.floor(winWidth * 0.95);
-    bookHeight = Math.floor(winHeight * 0.8);
-  }
+	$('.flipbook').turn({
+			// Width
 
-  $('.flipbook').turn({
-    width: bookWidth,
-    height: bookHeight,
-    elevation: 50,
-    gradients: true,
-    autoCenter: true,
-    display: (winWidth > 768 ? 'double' : 'single') // 👈 clave
-  });
+			width:922,
+			
+			// Height
+
+			height:600,
+
+			// Elevation
+
+			elevation: 50,
+
+			// Enable gradients
+
+			gradients: true,
+
+			// Auto center this flipbook
+
+			autoCenter: true
+
+	});
 }
 
-// Recalcular al redimensionar
-$(window).on('resize', function() {
-  var winWidth = $(window).width();
-  var winHeight = $(window).height();
+// Load the HTML4 version if there's not CSS transform
 
-  var bookWidth, bookHeight;
-
-  if (winWidth > 768) {
-    bookWidth = Math.min(922, Math.floor(winWidth * 0.9));
-    bookHeight = Math.min(600, Math.floor(winHeight * 0.9));
-  } else {
-    bookWidth = Math.floor(winWidth * 0.95);
-    bookHeight = Math.floor(winHeight * 0.8);
-  }
-
-  $('.flipbook').turn('size', bookWidth, bookHeight);
-  $('.flipbook').turn('display', (winWidth > 768 ? 'double' : 'single'));
-});
 yepnope({
 	test : Modernizr.csstransforms,
 	yep: ['JS/lib/turn.js'],
@@ -172,6 +140,8 @@ yepnope({
 });
 
 </script>
+
+
     <script src="JS/extras/jquery.min.1.7.js"></script>
     <script src="JS/extras/modernizr.2.5.3.min.js"></script>
     <script src="JS/carta.js"></script>
