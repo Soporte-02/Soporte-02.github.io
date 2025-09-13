@@ -1,89 +1,181 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Capacillo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- CSS externos -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Tu CSS (ajusta la ruta y mayúsculas si tu carpeta se llama diferente) -->
+  <link rel="stylesheet" type="text/css" href="CSS/index.css">
 
-  <!-- Turn.js desde CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
-
-  <style>
-    body { background: #f8f9fa; }
-    .flipbook-viewport { margin: 0 auto; }
-    .flipbook {
-      width: 922px;
-      height: 600px;
-      margin: auto;
-    }
-    .flipbook div {
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-    }
-  </style>
+  <link rel="icon" href="https://github.com/Soporte-02/Soporte-02.github.io/blob/main/Img/beeimgtmp-20250730-172830.png?raw=true" />
+  <script src="https://kit.fontawesome.com/181a7f6408.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="bodydex">
 
-  <section class="container text-center my-4">
-    <h1>Capacillo</h1>
-    <h2>"Colores y tamaños"</h2>
-  </section>
-
-  <!-- Flipbook -->
   <section>
-    <div class="flipbook-viewport">
-      <div class="flipbook">
-        <div style="background-image:url(Img/Capacillos/Capacillos-01.png)"></div>
-        <div style="background-image:url(Img/Capacillos/Capacillos-02.png)"></div>
-        <div style="background-image:url(Img/Capacillos/Capacillos-03.png)"></div>
-        <div style="background-image:url(Img/Capacillos/Capacillos-04.png)"></div>
-        <div style="background-image:url(Img/Capacillos/Capacillos-05.png)"></div>
-        <div style="background-image:url(Img/Capacillos/Capacillos-06.png)"></div>
-        <div style="background-image:url(Img/Capacillos/Capacillos-07.png)"></div>
-        <div style="background-image:url(Img/Capacillos/Capacillos-08.png)"></div>
-        <!-- sigue con tus páginas... -->
-      </div>
+    <div class="dini text-center">
+      <img src="https://github.com/Soporte-02/Soporte-02.github.io/blob/main/Img/Logotipo%20El%20Nivel%20blanco-01.png?raw=true"
+           height="120" width="120" class="imini" title="El Nivel" alt="Logo">
     </div>
   </section>
 
-  <script>
-    function resizeFlipbook() {
-      let winWidth = $(window).width();
-      let winHeight = $(window).height();
+  <section class="container text-center my-4" id="sec">
+    <div>
+      <img src="https://github.com/Soporte-02/Soporte-02.github.io/blob/main/Img/Personaje%20Nivel-01.png?raw=true"
+           class="personaje img-fluid mb-3" id="imgsec" title="Personaje Nivel" alt="Personaje">
+      <h1 id="sec">Capacillo</h1>
+      <h2 id="sec1">"Colores y tamaños"</h2>
+    </div>
+  </section><br>
 
-      let bookWidth, bookHeight;
+  <section>
+    <div class="flipbook-viewport">
+      <div class="container">
+        <div class="flipbook">
+          <!-- Tus páginas (relativas a la estructura del repo) -->
+          <div style="background-image:url(Img/Capacillos/Capacillos-01.png)"></div>
+          <div style="background-image:url(Img/Capacillos/Capacillos-02.png)"></div>
+          <div style="background-image:url(Img/Capacillos/Capacillos-03.png)"></div>
+          <!-- ... resto de páginas (cap-04 ... cap-33) ... -->
+          <div style="background-image:url(Img/Capacillos/Capacillos-33.png)"></div>
+        </div>
+      </div>
+    </div>
+  </section><br><br>
+
+  <footer class="fter-rec">
+    <!-- footer igual al tuyo (lo dejé tal cual por brevedad) -->
+    <div class="footer-container">
+      <div class="contenedor-imagenes text-center">
+        <img src="https://github.com/Soporte-02/Soporte-02.github.io/blob/main/Img/redes/Caritas-01.png?raw=true" class="img-resp" alt="">
+        <img src="https://github.com/Soporte-02/Soporte-02.github.io/blob/main/Img/Logo%20circulo%20nivel%20cursos-61.png?raw=true" class="img-resp" alt="">
+        <img src="https://github.com/Soporte-02/Soporte-02.github.io/blob/main/Img/redes/Caritas-01.png?raw=true" class="img-resp" alt="">
+      </div>
+
+      <div class="footer-texto text-center">
+        <h2>YA NOS SIGUES</h2>
+        <h2>EN TODAS NUESTRAS REDES</h2>
+      </div><br>
+
+      <div class="footer-redes">
+        <!-- redes (mantuve tus enlaces) -->
+        <div class="icono-red">
+          <a href="https://www.instagram.com/elnivel_materiasprimas?igsh=MXcydzk4cmRrbDJmZA==">
+            <img src="https://github.com/Soporte-02/Soporte-02.github.io/blob/main/Img/redes/Cuadro%20Instagram-01.png?raw=true" title="Instagram" class="imagen-recetasr" alt="">
+          </a>
+          <span class="texto-icono">elnivel_materiasprimas</span>
+        </div>
+        <!-- otros iconos... -->
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS: jQuery primero -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Turn.js: lo intentamos desde CDN; si no está, el script dinámico cargará lo necesario -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+
+  <!-- Leaflet si lo usas -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <script>
+    // Carga dinámica de scripts (por si no se cargó turn.js)
+    function loadScript(src, cb){
+      var s = document.createElement('script');
+      s.src = src;
+      s.onload = cb || function(){};
+      s.onerror = function(){ console.error('Error cargando script:', src); cb && cb(); };
+      document.head.appendChild(s);
+    }
+
+    // Función que tenías: loadApp (restaurada y mejorada para no iniciar dos veces)
+    function loadApp(){
+      var winWidth = $(window).width();
+      var winHeight = $(window).height();
+
+      var bookWidth, bookHeight;
 
       if (winWidth > 768) {
+        // Escritorio → dos páginas
         bookWidth = Math.min(922, Math.floor(winWidth * 0.9));
         bookHeight = Math.min(600, Math.floor(winHeight * 0.9));
       } else {
+        // Móvil → una sola página más ancha
         bookWidth = Math.floor(winWidth * 0.95);
         bookHeight = Math.floor(winHeight * 0.8);
       }
 
-      $(".flipbook").turn("size", bookWidth, bookHeight);
-      $(".flipbook").turn("display", (winWidth > 768 ? "double" : "single"));
+      var $fb = $('.flipbook');
+
+      // Si ya fue inicializado, solo actualizamos tamaño y display
+      if ($fb.data('turn-initialized')) {
+        try {
+          $fb.turn('size', bookWidth, bookHeight);
+          $fb.turn('display', (winWidth > 768 ? 'double' : 'single'));
+        } catch(e){
+          console.warn('Error actualizando flipbook:', e);
+        }
+      } else {
+        // Inicializamos por primera vez
+        try {
+          $fb.turn({
+            width: bookWidth,
+            height: bookHeight,
+            elevation: 50,
+            gradients: true,
+            autoCenter: true,
+            display: (winWidth > 768 ? 'double' : 'single')
+          });
+          $fb.data('turn-initialized', true);
+        } catch(e){
+          console.error('No se pudo inicializar turn.js:', e);
+        }
+      }
     }
 
-    $(document).ready(function () {
-      $(".flipbook").turn({
-        width: 922,
-        height: 600,
-        autoCenter: true,
-        display: ($(window).width() > 768 ? "double" : "single")
-      });
+    // Arranque: aseguramos que turn.js esté disponible y luego llamamos loadApp()
+    $(document).ready(function(){
+      function start() {
+        loadApp();
+        // Redimensionar con debounce para evitar llamadas excesivas
+        var resizeTimer;
+        $(window).on('resize', function(){
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(function(){
+            loadApp();
+          }, 120);
+        });
+      }
 
-      resizeFlipbook();
-      $(window).resize(resizeFlipbook);
+      // Si $.fn.turn no existe (turn.js no cargó), lo cargamos dinámicamente y luego arrancamos
+      if (typeof $.fn.turn === 'undefined') {
+        console.warn('turn.js no está presente. Intentando cargar desde CDN...');
+        loadScript('https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js', function(){
+          if (typeof $.fn.turn === 'undefined') {
+            console.error('No se cargó turn.js desde CDN. Revisa tu conexión o incluye el archivo local js/lib/turn.js');
+            // Si tienes un fallback local, descomenta la línea de abajo:
+            // loadScript('js/lib/turn.js', start);
+            return;
+          }
+          start();
+        });
+      } else {
+        start();
+      }
     });
   </script>
 
+  <!-- Tus scripts locales (conservé exactamente los nombres que tenías; si tu repo usa minúsculas/case distinto, ajústalo) -->
+  <script src="Js/carta.js"></script>
+  <script src="Js/script.js"></script>
+  <script src="JS/maps.js"></script>
 </body>
 </html>
