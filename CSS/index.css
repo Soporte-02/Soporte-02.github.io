@@ -505,7 +505,7 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
   padding: 20px;
   /*background-color: #0074C7; /* Color de fondo del footer */
   background: #0074C7;
-background: linear-gradient(171deg,rgba(0, 116, 199, 1) 0%, rgba(219, 217, 217, 1) 60%);
+    background: linear-gradient(171deg,rgba(0, 116, 199, 1) 0%, rgba(219, 217, 217, 1) 60%);
   color: white;
   text-align: center;
 }
