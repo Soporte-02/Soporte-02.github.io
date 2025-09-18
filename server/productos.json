@@ -22,5 +22,11 @@
     "codigo": "lac001",
     "precio": 39,
     "imagen": ""
+  },
+  {
+    "nombre": "bote",
+    "codigo": "bt001",
+    "precio": 29,
+    "imagen": ""
   }
 ]

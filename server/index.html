@@ -118,18 +118,18 @@
 
 </body>
 </html-->
-<!DOCTYPE html>
+
+    <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <title>Editar Productos</title>
   <style>
-    body { font-family: Arial, sans-serif; 
+     body { font-family: Arial, sans-serif; 
    background: linear-gradient(171deg,rgba(0, 116, 199, 1) 0%, rgba(219, 217, 217, 1) 60%);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-  
     }
     .contenedor { display: flex; flex-wrap: wrap; gap: 20px; }
     .producto {
@@ -153,7 +153,13 @@
   </style>
 </head>
 <body>
-  <h1>Gestión de Productos</h1>
+  <h1>Gestión de Productos</h1> 
+  <center>
+      <!-- Botón de Cerrar Sesión -->
+  <div id="cerrarSesionDiv" style="display: none;">
+    <button class="btn" onclick="cerrarSesion()">Cerrar sesión</button>
+  </div>
+  </center><br>
 
   <!-- Formulario de login -->
   <div id="login">
@@ -176,7 +182,22 @@
     <button class="btn" onclick="agregarProducto()">Agregar</button>
   </div>
 
+
+
   <script>
+    // Verificar si ya está autenticado
+    if (!localStorage.getItem("usuarioAutenticado")) {
+      // Si no está autenticado, mostrar solo el formulario de login
+      document.getElementById("productos").style.display = "none";
+      document.getElementById("login").style.display = "block";
+    } else {
+      // Si está autenticado, mostrar la lista de productos
+      document.getElementById("login").style.display = "none";
+      document.getElementById("productos").style.display = "flex";
+      document.getElementById("cerrarSesionDiv").style.display = "block"; // Mostrar botón de cerrar sesión
+      cargarProductos();
+    }
+
     // Usuarios y contraseñas (esto debe ser manejado de manera segura en el backend)
     const usuarios = [
       { username: "admin", password: "admin123" },
@@ -192,9 +213,12 @@
       const usuario = usuarios.find(u => u.username === username && u.password === password);
 
       if (usuario) {
+        // Guardar el estado de autenticación en localStorage
+        localStorage.setItem("usuarioAutenticado", username);
         alert("Inicio de sesión exitoso!");
         document.getElementById("login").style.display = "none";
         document.getElementById("productos").style.display = "flex";
+        document.getElementById("cerrarSesionDiv").style.display = "block"; // Mostrar botón de cerrar sesión
         cargarProductos(); // Cargar productos después de login
       } else {
         alert("Usuario o contraseña incorrectos.");
@@ -264,6 +288,16 @@
       })
       .then(res => res.text())
       .then(msg => { alert(msg); cargarProductos(); });
+    }
+
+    // Cerrar sesión
+    function cerrarSesion() {
+      // Eliminar el estado de autenticación
+      localStorage.removeItem("usuarioAutenticado");
+      // Mostrar solo el formulario de login nuevamente
+      document.getElementById("productos").style.display = "none";
+      document.getElementById("login").style.display = "block";
+      document.getElementById("cerrarSesionDiv").style.display = "none";
     }
   </script>
 

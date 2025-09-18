@@ -997,3 +997,160 @@ yepnope({
 });
 
 </script-->
+
+
+/***************SERVER*******************/
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar Productos</title>
+  <style>
+    body { font-family: Arial, sans-serif; 
+   background: linear-gradient(171deg,rgba(0, 116, 199, 1) 0%, rgba(219, 217, 217, 1) 60%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  
+    }
+    .contenedor { display: flex; flex-wrap: wrap; gap: 20px; }
+    .producto {
+      border: 1px solid #ccc; border-radius: 8px; padding: 15px;
+      width: 250px; text-align: center;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    }
+    .producto img { max-width: 100%; border-radius: 8px; }
+    .precio { font-size: 18px; font-weight: bold; color: green; }
+    .btn {
+      background: blue; color: white; border: none;
+      padding: 8px 12px; margin: 5px;
+      border-radius: 5px; cursor: pointer;
+    }
+    .btn:hover { opacity: 0.8; }
+    .btn-danger { background: red; }
+    .formulario { margin-top: 40px; }
+    .formulario input { margin: 5px; padding: 8px; }
+    #productos { display: none; }
+    #login { display: block; }
+  </style>
+</head>
+<body>
+  <h1>Gestión de Productos</h1>
+
+  <!-- Formulario de login -->
+  <div id="login">
+    <h2>Iniciar sesión</h2>
+    <input type="text" id="username" placeholder="Usuario">
+    <input type="password" id="password" placeholder="Contraseña">
+    <button class="btn" onclick="iniciarSesion()">Iniciar sesión</button>
+  </div>
+
+  <!-- Lista de productos -->
+  <div class="contenedor" id="productos"></div>
+
+  <!-- Formulario para agregar -->
+  <div class="formulario">
+    <h2>Agregar nuevo producto</h2>
+    <input type="text" id="nuevoNombre" placeholder="Nombre">
+    <input type="text" id="nuevoCodigo" placeholder="Código">
+    <input type="number" id="nuevoPrecio" placeholder="Precio">
+    <input type="text" id="nuevaImagen" placeholder="URL de imagen">
+    <button class="btn" onclick="agregarProducto()">Agregar</button>
+  </div>
+
+  <script>
+    // Usuarios y contraseñas (esto debe ser manejado de manera segura en el backend)
+    const usuarios = [
+      { username: "admin", password: "admin123" },
+      { username: "user", password: "user123" }
+    ];
+
+    // Validar inicio de sesión
+    function iniciarSesion() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // Comprobar si las credenciales son correctas
+      const usuario = usuarios.find(u => u.username === username && u.password === password);
+
+      
+      if (usuario) {
+        alert("Inicio de sesión exitoso!");
+        document.getElementById("login").style.display = "none";
+        document.getElementById("productos").style.display = "flex";
+        cargarProductos(); // Cargar productos después de login
+      } else {
+        alert("Usuario o contraseña incorrectos.");
+      }
+    }
+
+    // Cargar productos
+    function cargarProductos() {
+      fetch('/productos')
+        .then(res => res.json())
+        .then(data => {
+          const contenedor = document.getElementById('productos');
+          contenedor.innerHTML = "";
+
+          data.forEach(producto => {
+            const div = document.createElement('div');
+            div.classList.add('producto');
+            div.innerHTML = `
+              <img src="${producto.imagen}" alt="${producto.nombre}">
+              <h3>${producto.nombre}</h3>
+              <p class="precio">Precio actual: $${producto.precio}</p>
+              <input type="number" id="precio-${producto.codigo}" value="${producto.precio}">
+              <button class="btn" onclick="actualizarPrecio('${producto.codigo}')">Actualizar</button>
+              <button class="btn btn-danger" onclick="eliminarProducto('${producto.codigo}')">Eliminar</button>
+            `;
+            contenedor.appendChild(div);
+          });
+        });
+    }
+
+    // Actualizar precio
+    function actualizarPrecio(codigo) {
+      const nuevoPrecio = document.getElementById(`precio-${codigo}`).value;
+      fetch('/actualizar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({codigo, nuevoPrecio: parseFloat(nuevoPrecio)}),
+      })
+      .then(res => res.text())
+      .then(msg => { alert(msg); cargarProductos(); });
+    }
+
+    // Agregar nuevo producto
+    function agregarProducto() {
+      const nombre = document.getElementById("nuevoNombre").value;
+      const codigo = document.getElementById("nuevoCodigo").value;
+      const precio = parseFloat(document.getElementById("nuevoPrecio").value);
+      const imagen = document.getElementById("nuevaImagen").value;
+
+      fetch('/agregar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nombre, codigo, precio, imagen })
+      })
+      .then(res => res.text())
+      .then(msg => { alert(msg); cargarProductos(); });
+    }
+
+    // Eliminar producto
+    function eliminarProducto(codigo) {
+      if (!confirm("¿Seguro que deseas eliminar este producto?")) return;
+
+      fetch('/eliminar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ codigo })
+      })
+      .then(res => res.text())
+      .then(msg => { alert(msg); cargarProductos(); });
+    }
+  </script>
+
+</body>
+</html>
