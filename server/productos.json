@@ -28,5 +28,11 @@
     "codigo": "bt001",
     "precio": 29,
     "imagen": ""
+  },
+  {
+    "nombre": "JP",
+    "codigo": "Jp00",
+    "precio": 100000000,
+    "imagen": ""
   }
 ]
