@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head> 
+
+    <meta name="description" content="Materias primas el nivel">
+    <meta name="keywords" content="Cis, centro de ingenireria, reparacion de computadiras, reparaciones tepic, Mantenimiento en tepic">
+
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
@@ -35,7 +39,7 @@
             <h1 id="sec">Capacillo</h1>
             <h2 id="sec1">"Colores y tamaños"</h2>
         </div>
-    </section><br>
+    </section>
 
      <section>
         <div class="flipbook-viewport">
@@ -128,61 +132,6 @@
   </div>
 </footer>
 
- <!--script type="text/javascript">
-
-function loadApp() {
-  var winWidth = $(window).width();
-  var winHeight = $(window).height();
-
-  var bookWidth, bookHeight;
-
-  if (winWidth > 768) {
-    // Escritorio → dos páginas
-    bookWidth = Math.min(922, Math.floor(winWidth * 0.9));
-    bookHeight = Math.min(600, Math.floor(winHeight * 0.9));
-  } else {
-    // Móvil → una sola página más ancha
-    bookWidth = Math.floor(winWidth * 0.95);
-    bookHeight = Math.floor(winHeight * 0.5);
-  }
-
-  $('.flipbook').turn({
-    width: bookWidth,
-    height: bookHeight,
-    elevation: 50,
-    gradients: true,
-    autoCenter: true,
-    display: (winWidth > 768 ? 'double' : 'single') // 👈 clave
-  });
-}
-
-// Recalcular al redimensionar
-$(window).on('resize', function() {
-  var winWidth = $(window).width();
-  var winHeight = $(window).height();
-
-  var bookWidth, bookHeight;
-
-  if (winWidth > 768) {
-    bookWidth = Math.min(922, Math.floor(winWidth * 0.9));
-    bookHeight = Math.min(600, Math.floor(winHeight * 0.9));
-  } else {
-    bookWidth = Math.floor(winWidth * 0.95);
-    bookHeight = Math.floor(winHeight * 0.7);
-  }
-
-  $('.flipbook').turn('size', bookWidth, bookHeight);
-  $('.flipbook').turn('display', (winWidth > 768 ? 'double' : 'single'));
-});
-yepnope({
-	test : Modernizr.csstransforms,
-	yep: ['JS/lib/turn.js'],
-	nope: ['JS/lib/turn.html4.min.js'],
-	both: ['CSS/basic.css'],
-	complete: loadApp
-});
-
-</script-->
 
 <script type="text/javascript">
   function loadApp() {
@@ -241,5 +190,6 @@ yepnope({
 </script>
     <script src="JS/extras/jquery.min.1.7.js"></script>
     <script src="JS/extras/modernizr.2.5.3.min.js"></script>
+    <script src="JS/script.js"></script>
 </body>
 </html>

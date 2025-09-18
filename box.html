@@ -948,42 +948,83 @@ var map1 = L.map('map1').setView([21.51365386536742, -104.89216517269102], 20); 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BOX</title>
-  <link rel="stylesheet" type="text/css" href="CSS/box.css">
+  <link rel="stylesheet" type="text/css" href="CSS/lop.css">
 </head>
 <body>
-<section>
-  <button onclick="openPDF('PDF/Catalogo Primavera.pdf')" class="open-btn">
-    Ver PDF 📃
-  </button>
 
-  <dialog id="pdfModal" class="pdf-dialog">
-    <div class="pdf-container">
-      <button class="close-btn" onclick="pdfModal.close()">✖</button>
-      <iframe id="pdfViewer"></iframe>
-    </div>
-  </dialog>
-
-  <a href="PDF/Catalogo Primavera.pdf">entrar pdf-container</a>
-</section>
-
-
-<script>
-  const pdfViewer = document.getElementById("pdfViewer");
-  const pdfModal = document.getElementById("pdfModal");
-
-  function openPDF(file) {
-    pdfViewer.src = file;
-    pdfModal.showModal();
-  }
-
-  // Cierra el modal si se hace clic fuera del contenido
-  pdfModal.addEventListener("click", (e) => {
-    if (e.target === pdfModal) {
-      pdfModal.close();
-    }
-  });
-</script>
-
+  <section class="sc2">
+        <a name="ancla4" id="a"></a>
+        <div id="trabajos" data-aos="fade-up" data-aos-duration="2000"><br>
+            <h4 class="h4">¿Qué servicios ofrecemos?</h4><br><br><br><br><br>
+            <center class="cnt">
+                <div class="conteudo-geral">
+                    <div class="conteudo-geral-sliderGeral">
+                        <div class="sliderGeral">
+                    <div class="sliderGeral-card">
+                      <h1>
+                        <img src="img/mantenimiento.png" id="rmg">
+                        Mantenimiento <br>
+                            <p id="rh2">(Se realiza tanto a impresoras como equipos de cómputo y más).</p>
+                      </h1>
+                    </div>
+    
+                    <div class="sliderGeral-card">
+                        <h1>
+                            <img src="img/reparar.png" id="rmg">
+                            Reparaciones <br>
+                                <p id="rh2">(Se realiza tanto a impresoras como qeuipos de computo y mas).</p>
+                          </h1>
+                    </div>
+    
+                    <div class="sliderGeral-card">
+                      <h1>
+                        <img src="img/camara.png" id="rmg">
+                        Cámaras de seguridad<br>
+                            <p id="rh2">(Se realiza instalaciones y mantenimiento).</p>
+                      </h1>
+                    </div>
+                    <div class="sliderGeral-card">
+                        <h1>
+                            <img src="img/soporte-tecnico.png" id="rmg">
+                            Soporte Técnico<br>
+                                <p id="rh2">(Se ofrece soporte para diferentes tipos de problematicas).</p>
+                          </h1>
+                    </div>
+                    <div class="sliderGeral-card">
+                        <h1>
+                            <img src="img/copiar.png" id="rmg">
+                            Copias <br>
+                                <p id="rh2">(Copias de tamaño carta ú oficio a color ó blanco y negro).</p>
+                          </h1>
+                    </div>
+                    <div class="sliderGeral-card">
+                        <h1>
+                            <img src="img/time.png" id="rmg">
+                            Tiempo aire <br>
+                                <p id="rh2">(Recargas para celular de cualquier compañía).</p>
+                          </h1>
+                    </div>
+                    <div class="sliderGeral-card">
+                        <h1>
+                            <img src="img/impr.png" id="rmg">
+                            Impresiones <br>
+                                <p id="rh2">(Cualquier tipo de tamaño y documentos).</p>
+                          </h1>
+                    </div>
+                    <div class="sliderGeral-card">
+                        <h1>
+                            <img src="img/impre.png" id="rmg">
+                            Tinta <br>
+                                <p id="rh2">(Recarga de cartuchos y toner).</p>
+                          </h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </center>
+        </div>
+      </section>
+       <script src="JS/lop.js"></script>
 </body>
 </html>
 
