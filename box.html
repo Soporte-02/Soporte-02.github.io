@@ -1025,6 +1025,70 @@ var map1 = L.map('map1').setView([21.51365386536742, -104.89216517269102], 20); 
         </div>
       </section>
 
+      <section>
+       <h1>Productos disponibles</h1>
+  <div id="productos-container"></div>
+
+  <script>
+    // Este es el contenido de tu archivo JSON con imágenes, nombres y precios
+    const productos = {
+      "productos": [
+        {
+          "imagen": "https://via.placeholder.com/150",
+          "nombre": "Producto 1",
+          "precio": 100
+        },
+        {
+          "imagen": "https://via.placeholder.com/150",
+          "nombre": "Producto 2",
+          "precio": 200
+        },
+        {
+          "imagen": "https://via.placeholder.com/150",
+          "nombre": "Producto 3",
+          "precio": 150
+        }
+      ]
+    };
+
+    // Función para mostrar productos con imagen, nombre y precio
+    function mostrarProductos() {
+      const container = document.getElementById('productos-container');
+      productos.productos.forEach(producto => {
+        // Crear el contenedor del producto
+        const divProducto = document.createElement('div');
+        divProducto.classList.add('producto');
+
+        // Crear la imagen
+        const img = document.createElement('img');
+        img.src = producto.imagen;
+        img.alt = producto.nombre;
+        
+        // Crear el nombre
+        const h2 = document.createElement('h2');
+        h2.textContent = producto.nombre;
+
+        // Crear el precio
+        const pPrecio = document.createElement('p');
+        pPrecio.classList.add('precio');
+        pPrecio.textContent = `$${producto.precio}`;
+
+        // Añadir los elementos al contenedor del producto
+        divProducto.appendChild(img);
+        divProducto.appendChild(h2);
+        divProducto.appendChild(pPrecio);
+
+        // Añadir el producto al contenedor principal
+        container.appendChild(divProducto);
+      });
+    }
+
+    // Llamar a la función para mostrar los productos
+    mostrarProductos();
+  </script>
+      </section>
+
+
 
        <script src="JS/lop.js"></script>
 </body>

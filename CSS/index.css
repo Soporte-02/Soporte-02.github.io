@@ -447,6 +447,10 @@ main{
  }
 
 /*****************RECETAS***********************/
+.txtre{
+    font-family: Cormorant Garamond;
+}
+
 .img-fluid{
 filter: drop-shadow(1px 1px 10px rgb(255, 255, 255));
 
@@ -528,11 +532,14 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
 .footer-texto h1 {
   font-size: 24px;
   margin: 10px 0;
+  
 }
 
 .footer-texto h3 {
   font-size: 16px;
   margin: 5px 0;
+ 
+  
 }
 
 .imagen-recetas {
