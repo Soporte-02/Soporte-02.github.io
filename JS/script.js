@@ -72,11 +72,3 @@ function buscador_interno(){
 
 }
 
-/*anty F12*/
-document.addEventListener('keydown', function(e) {
-  // F12 tiene el keyCode 123
-  if (e.keyCode === 123) {
-    e.preventDefault();
-    alert("Las herramientas para desarrolladores están deshabilitadas.");
-  }
-});
