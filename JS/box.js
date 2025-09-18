@@ -184,16 +184,3 @@ if (window.location.hash) {
 }
 
 
-
-/****************PDF****************/
-const pdfViewer = document.getElementById("pdfViewer");
-const pdfModal = document.getElementById("pdfModal");
-function openPDF(file){
- pdfViewer.src = file;
- pdfModal.showModal();   
-}
-pdfModal.addEventListener("click", (e)=> {
-    if (e.target === pdfModal){
-        pdfModal.closest();
-    }
-});

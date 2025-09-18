@@ -1,20 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/***************Ancla***************/
+/***************Busquedad***************/
 
-        /* Agregamos una clase CSS para el resaltado */
+        /**********************************Recetas********************************************/
         .highlight {
             border: 2px solid red; /* Borde rojo */
-            margin-bottom: 15px; /* Espacio debajo del producto resaltado */
+            margin-bottom: 16px; /* Espacio debajo del producto resaltado */
             background-color: #ffeeee; /* Fondo ligeramente rosado */
         }
     
     /* Estilo para la clase de resaltado */
-    .highlight-img {
-        border: 4px solid red; /* Borde rojo que resalta la imagen */
-        box-shadow: 0 0 10px red; /* Una sombra para mayor visibilidad */
+    /*.highlight-img {
+        border: 4px solid red; 
+        box-shadow: 0 0 10px red; 
         transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    }
+    }*/
+
+    /******************************Catalogo***********************/
+        .highlight-cat {
+            border: 2px solid black; /* Borde rojo */
+            margin-bottom: 15px; /* Espacio debajo del producto resaltado */
+            background-color: #fcfcfc; 
+            border-radius: 15px;
+        }
+    
 
 /**************HTML*********************/
 
@@ -410,6 +419,7 @@ main{
     border-radius: 10px;
     background-color: red;
     font-family: Cormorant Garamond;
+    font-size: 20px;
 }
  .fs{
     background-color: /*#d6d9d9*/ #d6d9d9;
@@ -644,7 +654,7 @@ background: linear-gradient(171deg,rgba(0, 116, 199, 1) 0%, rgba(219, 217, 217, 
  
 /********************MENU********************/
 .tbf{
-    resize: horizontal;
+  
     resize: both;
     transform: translate(-15px);
     background-image: url('../Img/Mapa-01.png');
@@ -672,21 +682,16 @@ background: linear-gradient(171deg,rgba(0, 116, 199, 1) 0%, rgba(219, 217, 217, 
     color: white;
     border-radius: 10px;*/
     background-color: transparent;
-    width: 160px;
+    width: 200px;
     height: auto;
     font-family: ExtraBold;
     color: #2B65A3;
     color: white;
     font: bold;
+    font-size: 20px;
     border: 0px;
 
-    display: flex;
-    align-items: center;  /* centra verticalmente */
-    justify-content: center; /* centra horizontalmente */
-    gap: 6px;             /* espacio entre icono y texto */
-    text-align: center;
-    white-space: normal;
-   /* border-radius: 5px #000;*/
+ 
 }
 
 .btm3{
@@ -798,7 +803,8 @@ background: linear-gradient(171deg,rgba(0, 116, 199, 1) 0%, rgba(219, 217, 217, 
 
 /*****************CATALOGOS********************/
 .bodyca{
-    background-color:#CCCCCC;
+    /*background-color:#CCCCCC;*/
+    background-color:#DDDDDD;
 }
 
 .imgre1{
@@ -808,4 +814,5 @@ background: linear-gradient(171deg,rgba(0, 116, 199, 1) 0%, rgba(219, 217, 217, 
 .imgre1:hover{
    /* background-color: rgb(133, 137, 247);*/
    background-color: rgb(255, 255, 255);
+   border-radius: 15px;
 }

@@ -128,7 +128,7 @@
   </div>
 </footer>
 
- <script type="text/javascript">
+ <!--script type="text/javascript">
 
 function loadApp() {
   var winWidth = $(window).width();
@@ -168,7 +168,7 @@ $(window).on('resize', function() {
     bookHeight = Math.min(600, Math.floor(winHeight * 0.9));
   } else {
     bookWidth = Math.floor(winWidth * 0.95);
-    bookHeight = Math.floor(winHeight * 0.8);
+    bookHeight = Math.floor(winHeight * 0.7);
   }
 
   $('.flipbook').turn('size', bookWidth, bookHeight);
@@ -182,13 +182,64 @@ yepnope({
 	complete: loadApp
 });
 
+</script-->
+
+<script type="text/javascript">
+  function loadApp() {
+    var winWidth = $(window).width();
+    var winHeight = $(window).height();
+
+    var bookWidth, bookHeight;
+
+    if (winWidth > 768) {
+      bookWidth = Math.min(922, Math.floor(winWidth * 0.9));
+      bookHeight = Math.min(600, Math.floor(winHeight * 0.9));
+    } else {
+      bookWidth = Math.floor(winWidth * 0.95);
+      bookHeight = Math.floor(winHeight * 0.5); // Igual en resize
+    }
+
+    $('.flipbook').turn({
+      width: bookWidth,
+      height: bookHeight,
+      elevation: 50,
+      gradients: true,
+      autoCenter: true,
+      display: (winWidth > 768 ? 'double' : 'single')
+    });
+  }
+
+  // ✅ Igualamos cálculos en resize
+  $(window).on('resize', function () {
+    var winWidth = $(window).width();
+    var winHeight = $(window).height();
+
+    var bookWidth, bookHeight;
+
+    if (winWidth > 768) {
+      bookWidth = Math.min(922, Math.floor(winWidth * 0.9));
+      bookHeight = Math.min(600, Math.floor(winHeight * 0.9));
+    } else {
+      bookWidth = Math.floor(winWidth * 0.95);
+      bookHeight = Math.floor(winHeight * 0.5); // Misma altura
+    }
+
+    $('.flipbook').turn('size', bookWidth, bookHeight);
+    $('.flipbook').turn('display', (winWidth > 768 ? 'double' : 'single'));
+  });
+
+  // ✅ Esperamos a que se cargue todo para evitar saltos
+  $(window).on('load', function () {
+    yepnope({
+      test: Modernizr.csstransforms,
+      yep: ['JS/lib/turn.js'],
+      nope: ['JS/lib/turn.html4.min.js'],
+      both: ['CSS/basic.css'],
+      complete: loadApp
+    });
+  });
 </script>
-
-
     <script src="JS/extras/jquery.min.1.7.js"></script>
     <script src="JS/extras/modernizr.2.5.3.min.js"></script>
-    <script src="JS/carta.js"></script>
-    <script src="JS/script.js"></script>
-    <script src="JS/maps.js"></script>
 </body>
 </html>
