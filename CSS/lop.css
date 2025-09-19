@@ -10,8 +10,8 @@ body {
 }
 
 #rmg{
-    height: 50px;
-    width: 50px;
+    height: 80px;
+    width: 80px;
 }
 #rh2{
     font-size: 12px;
@@ -40,7 +40,7 @@ img {
   align-items: center;
 }*/
 .conteudo-geral{
-    font-family: Cooper;
+    font-family: Cormorant Garamond;
     margin: 5px;
 }
 
@@ -76,7 +76,7 @@ img {
   opacity: 1;
 }
 .sliderGeral-card h1 {
-  color: #fff;
+  color: red;
   font-size: 1.8rem;
 }
 
@@ -89,8 +89,9 @@ img {
 .sliderGeral-card:nth-child(1) {
   --rotatey: 0;
   transform: rotatey(var(--rotatey)) translatez(var(--tz));
-  background: linear-gradient(180deg, #181f18 0%, #1F4A82 100%);  
-  border:4px solid #0f2848;
+  /*background: linear-gradient(180deg, #181f18 0%, #1F4A82 100%);  
+  border:4px solid #0f2848;*/
+  background: linear-gradient(171deg,rgba(0, 116, 199, 1) 0%, rgba(219, 217, 217, 1) 60%);
 }
 
 .sliderGeral-card:nth-child(2) {
@@ -208,7 +209,7 @@ body::-webkit-scrollbar-thumb {
   font-size:20px;
   height:auto; /*180px*/
   width: 100%;
-  font-family: 'Poppins', sans-serif;
+  font-family: Cormorant Garamond;
   justify-content: left;
 }
 
@@ -216,12 +217,12 @@ body::-webkit-scrollbar-thumb {
   color: white;
   font-size: 30px;
   text-align: center;
-  font-family: Cooper;
+  font-family: Cormorant Garamond;
 }
 .tdt {
   font-weight: none;
   color: #1A63E6;
-  font-family: Cooper;
+  font-family: Cormorant Garamond;
 }
 .tdd {
   color: #333333;
@@ -233,7 +234,7 @@ body::-webkit-scrollbar-thumb {
     width: auto;
     margin: 0;
     padding: 0;
-    font-family: Cooper;
+    font-family: Cormorant Garamond;
 }
 a {
     text-decoration: none;
