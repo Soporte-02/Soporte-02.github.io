@@ -691,6 +691,8 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
     border-radius: 15px;
     height: 300px;
     width: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .tbf{
   
