@@ -1459,3 +1459,27 @@ yepnope({
             </table>
         </center><br><br>
     </footer>
+
+
+    /*********************alert****************/
+
+    <script>
+    function mostrarAlerta(event) {
+        event.preventDefault(); 
+        Swal.fire({
+        title: 'Hola un gusto saludarte.',
+        text:'Te informamos que esta página es ilustrativa. No se pueden realizar compras dentro de esta pagina, si necesitas alguna cotización puedes hacerlo mediante el numero de WhatsApp (se encuentra en el inicio de esta pagina o presionando el botón rojo del inicio). Gracias por tu Preferencia.',
+        icon: 'success',
+        showCancelButton: true,
+        confirmButtonColor: '#4f9b18',
+        cancelButtonColor: 'red',
+        confirmButtonText: 'Continuar',
+        cancelButtonText: 'Cancelar',
+        }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = "menu.html";
+        }
+        });
+        return false;
+    }
+    </script>
