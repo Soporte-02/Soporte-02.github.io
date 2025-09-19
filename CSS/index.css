@@ -677,6 +677,21 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
 }
  
 /********************MENU********************/
+.imgre3{
+    width: 200px;
+    height: 200px;
+}
+.amn:hover{
+    background-color: rgba(187, 154, 241, 0.537);
+   border-radius: 15px;
+   border:2px solid #2B65A3;
+}
+.amn{
+    border:2px solid #2B65A3;
+    border-radius: 15px;
+    height: 300px;
+    width: 300px;
+}
 .tbf{
   
     resize: both;
