@@ -14,18 +14,38 @@
     <title>Inicio</title>
     <link rel="stylesheet" type="text/css" href="CSS/index.css">
     <link rel="icon" href="https://github.com/Soporte-02/Soporte-02.github.io/blob/main/Img/beeimgtmp-20250730-172830.png?raw=true" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+    function confirmarAcceso() {
+        return confirm("Hola un gusto saludarte. Te informamos que esta pagina es ilustrativa. No se pueden realizar compras dentro de esta pagina, si necesitas alguna cotizacion puedes hacerlo mediate el numero de WhatsApp (se encuentra en el inicio de esta pagina) ó precionando el boton rojo");
+    }
+</script>
+
+ <script>
+    function mostrarAlerta() {
+      Swal.fire({
+        title: '¡Hola!',
+        text: 'Esto es una alerta bonita con SweetAlert2',
+        icon: 'success', // success | error | warning | info | question
+        confirmButtonText: 'Aceptar'
+      });
+    }
+  </script>
+
+
+
 </head>
 <body class="bodyini">
    
         <div class="dini">
             <center>
-                <img src="https://github.com/Soporte-02/Soporte-02.github.io/blob/main/Img/Logotipo%20El%20Nivel%20blanco-01.png?raw=true" height="120px" width="120px" class="imini">
+                <img src="Img/Logotipo El Nivel blanco-01.png" height="120px" width="120px" class="imini">
             </center>
         </div><br>
 
             <center>
                 <section>
-                    <a href="menu.html" class="a"><img src="https://github.com/Soporte-02/Soporte-02.github.io/blob/main/Img/Logo%20circulo%20nivel%20cursos-61.png?raw=true" title="Entrar a menu" class="bini"></a>
+                    <a href="menu.html" class="a" onclick="return mostrarAlerta(event);"><img src="Img/Logo circulo nivel cursos-61.png" title="Entrar a menu" class="bini"></a>
                 </section>
 
                     <div class="wrapper">
@@ -38,7 +58,7 @@
                         <img src="https://github.com/Soporte-02/Soporte-02.github.io/blob/main/Img/whatsapp.png?raw=true" height="50" width="50">
                         <h3 class="ih32">311 114 54-66</h3>
                     </div><br>
-                <button class="ab"><a href="https://api.whatsapp.com/send/?phone=523111145466&text&type=phone_number&app_absent=0">Haz clic aqui para realizar tú pedido</a></button>
+                <button class="ab"><a href="https://api.whatsapp.com/send/?phone=523111145466&text&type=phone_number&app_absent=0">Haz clic aqui, para realizar tú pedido</a></button>
             </center><br><br><br><br><br>
             
     <footer>
@@ -48,18 +68,35 @@
                     <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/mrcs/Alegria-01.png?raw=true" height="200px" width="200px" class="fsi">
                 </a>
                 <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/mrcs/Chantilly-01.png?raw=true" height="200px" width="200px" class="fsi">
-                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/mrcs/Chefmaster-01.png?raw=true" height="200px" width="200px" class="fsi">
-
                 <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/mrcs/Dawn-01.png?raw=true" height="200px" width="200px" class="fsi">
                 <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/mrcs/Deiman-01.png?raw=true" height="200px" width="200px" class="fsi">
                 <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/mrcs/Ma%20Baker-01.png?raw=true" height="200px" width="200px" class="fsi">
-
                  <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/mrcs/Nestl%C3%A9-01.png?raw=true" height="200px" width="200px" class="fsi">
                 <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/mrcs/Puratos-01.png?raw=true" height="200px" width="200px" class="fsi">
-                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/mrcs/Turin-01.png?raw=true" height="200px" width="200px" class="fsi">
-                
+                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/mrcs/Turin-01.png?raw=true" height="200px" width="200px" class="fsi"> 
         </section>
     </footer>
+    <script>
+  function mostrarAlerta(event) {
+    event.preventDefault(); 
+
+    Swal.fire({
+      title: 'Hola un gusto saludarte.',
+      text:'Te informamos que esta pagina es ilustrativa. No se pueden realizar compras dentro de esta pagina, si necesitas alguna cotizacion puedes hacerlo mediate el numero de WhatsApp (se encuentra en el inicio de esta pagina ó precionando el boton rojo). Gracias por tu Preferencia.',
+      icon: 'success',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Continuar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href = "menu.html";
+      }
+    });
+    return false;
+  }
+</script>
     <script src="JS/carta.js"></script>
     <script src="JS/script.js"></script>
     <script src="JS/box.js"></script>

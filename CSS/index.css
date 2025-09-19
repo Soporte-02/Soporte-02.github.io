@@ -439,7 +439,7 @@ main{
     font-size: 20px;
 }
  .fs{
-    background-color: /*#d6d9d9*/ #d6d9d9;
+    background-color: /*#d6d9d9*/ /*#d6d9d9*/ white;
  }
 .fsi{
     border: 3px #000;
@@ -629,16 +629,16 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
     background-color: #EBE7DD;
     border-radius: 10px;
 
-      max-width: 600px;   /* ancho máximo */
-  margin: 0 auto;     /* centrado horizontal */
+    max-width: 600px;   
+    margin: 0 auto;    
 }
 .bt{
     background-color: #0074C7;
     color: white;
     border-radius: 10px;
 
-      max-width: 600px;   /* ancho máximo */
-  margin: 0 auto;     /* centrado horizontal */
+      max-width: 600px;   
+  margin: 0 auto;    
 }
 
 
@@ -835,6 +835,10 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
     font-size: 14px;
     margin: 4px 0;
   }
+  h4{
+    font-size: 14px;
+    margin: 4px 0;
+  }
 
   .btm, .btm1 {
     font-size: 14px;
@@ -857,3 +861,26 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
    background-color: rgb(255, 255, 255);
    border-radius: 15px;
 }
+
+/***********************Capacillos*********************/
+.al{
+    background-color: lawngreen;
+    font-family: Cormorant Garamond;
+    margin-left: -30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.al1{
+    font-family: Cormorant Garamond;
+     margin: 0;
+      font-size: 1.2rem;
+      margin-left: 50px;
+}
+ /* Responsivo */
+    @media (max-width: 600px) {
+      .al h5 {
+        font-size: 1rem;
+        padding: 10px;
+      }
+    }

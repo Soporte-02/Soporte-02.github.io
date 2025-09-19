@@ -37,7 +37,6 @@
   });
 
 
-
 var map2 = L.map('map2').setView([21.47499451910332, -104.85319681047626], 20); // Coordenadas de León, México
   // Capa de OpenStreetMap
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -55,7 +54,6 @@ var map2 = L.map('map2').setView([21.47499451910332, -104.85319681047626], 20); 
       }, 100); // pequeño delay para que se redibuje bien
     }
   });
-
 
   
   var map3 = L.map('map3').setView([21.490883568474388, -104.88358745004416], 20); // Coordenadas de León, México
@@ -128,7 +126,7 @@ var map2 = L.map('map2').setView([21.47499451910332, -104.85319681047626], 20); 
     attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
   }).addTo(map7);
   L.marker([21.51166614758099, -104.89647000141537]).addTo(map7)
-    .bindPopup("¡Hola! Este es Nivel Enbaces.")
+    .bindPopup("¡Hola! Este es Nivel Envases.")
     .openPopup();
   // --- Fix para cuando el mapa está dentro de un popover ---
   document.getElementById("modal7").addEventListener("toggle", (e) => {
