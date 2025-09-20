@@ -908,6 +908,10 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
     }
 
 /******************Especiales***********************/
+.muertos{
+  height: 300px;
+  width: 300px;
+}
 .bodymuertos{
     background-image: url('../Img/diamuertos.png'); /* Ruta a tu imagen */
     background-repeat: no-repeat; /* No repite la imagen */
@@ -917,18 +921,22 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
 }
 .muertos:hover{
     background: 
-        linear-gradient(transparent, transparent),
+        /*linear-gradient(transparent, transparent),*/
+        linear-gradient(rgba(41, 41, 41, 0.8), transparent),
         url('../Img/Muertos.gif') center center / cover no-repeat;
         /*url('https://i.pinimg.com/originals/23/7a/c5/237ac54cdea81df47af9a65f895ee6db.gif') center center / cover no-repeat;*/
-      opacity: 30px;
 }
-
+.mexico{
+  height: 300px;
+  width: 300px;
+}
 .mexico:hover{
     background: 
-        linear-gradient(transparent, transparent),
+        linear-gradient(rgba(255, 255, 255, 0.8), transparent),
         url('../Img/mexico.gif') center center / cover no-repeat;
         /*url('https://i.pinimg.com/originals/23/7a/c5/237ac54cdea81df47af9a65f895ee6db.gif') center center / cover no-repeat;*/
-      opacity: 30px;
+    height: 300px;
+    width: 300px;
 }
 .bodymexico{
     background-image: url('../Img/vivamexico.png'); /* Ruta a tu imagen */
