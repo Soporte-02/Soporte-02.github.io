@@ -861,6 +861,28 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
    background-color: rgb(255, 255, 255);
    border-radius: 15px;
 }
+ /*boton atras*/
+.btn-atras {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: white;
+      color: #000000;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-atras:hover {
+      background-color: #f0f0f0;
+    }
+
+
 
 /***********************Capacillos*********************/
 .al{
@@ -873,9 +895,9 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
 
 .al1{
     font-family: Cormorant Garamond;
-     margin: 0;
-      font-size: 1.2rem;
-      margin-left: 50px;
+    margin: 0;
+    font-size: 1.2rem;
+    margin-left: 50px;
 }
  /* Responsivo */
     @media (max-width: 600px) {
@@ -884,3 +906,83 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
         padding: 10px;
       }
     }
+
+/******************Especiales***********************/
+.bodymuertos{
+    background-image: url('../Img/diamuertos.png'); /* Ruta a tu imagen */
+    background-repeat: no-repeat; /* No repite la imagen */
+    background-size: cover; /* La imagen cubre todo el elemento */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+}
+.muertos:hover{
+    background: 
+        linear-gradient(transparent, transparent),
+        url('../Img/Muertos.gif') center center / cover no-repeat;
+        /*url('https://i.pinimg.com/originals/23/7a/c5/237ac54cdea81df47af9a65f895ee6db.gif') center center / cover no-repeat;*/
+      opacity: 30px;
+}
+
+.mexico:hover{
+    background: 
+        linear-gradient(transparent, transparent),
+        url('../Img/mexico.gif') center center / cover no-repeat;
+        /*url('https://i.pinimg.com/originals/23/7a/c5/237ac54cdea81df47af9a65f895ee6db.gif') center center / cover no-repeat;*/
+      opacity: 30px;
+}
+.bodymexico{
+    background-image: url('../Img/vivamexico.png'); /* Ruta a tu imagen */
+    background-repeat: no-repeat; /* No repite la imagen */
+    background-size: cover; /* La imagen cubre todo el elemento */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+}
+
+
+.alM {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: bold;
+  text-align: center;
+  height: auto;
+}
+
+.franja {
+  flex: 1;
+  min-width: 0; /* Evita que las franjas fuercen overflow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.verde {
+  background-color: #006847;
+}
+
+.blanca {
+  background-color: white;
+}
+
+.roja {
+  background-color: #ce1126;
+}
+
+.al1M {
+  margin: 0;
+  font-size: 1rem;
+  color: black;
+  max-width: 100%;
+  word-break: break-word;
+  padding: 0 10px;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 480px) {
+  .al1M {
+    font-size: 0.9rem;
+  }
+}
