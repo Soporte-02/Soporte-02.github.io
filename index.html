@@ -74,6 +74,7 @@
                 <img src="Img/marcas/Turin-01.png" height="200px" width="200px" class="fsi"> 
         </section>
     </footer>
+
     <script>
   function mostrarAlerta(event) {
     event.preventDefault(); 
@@ -113,7 +114,7 @@
 }
 </script>
 
-  <!-- Protección contra inspección -->
+   <!-- Protección contra inspección -->
   <script>
     // Borrar contenido si se detecta DevTools
     function borrarContenido() {
@@ -122,18 +123,18 @@
           ⚠️ Acceso Denegado
         </h1>
         <p style="text-align: center;">
-         Esta opcion está permitido en este sitio.
+          Esta opcion está permitido en este sitio.
         </p>
-          <div class="text-center">  
+        <div class="text-center">  
             <a href="index.html" class="btn-atras">Regresar</a>
-          </div>
+        </div>
         `;
     }
 
     // Bloqueo de teclas (F12, Ctrl+Shift+I, Ctrl+U, etc.)
     document.addEventListener('keydown', function (e) {
       if (
-        e.key === "F12", "ctrl" ||
+        e.key === "F12" ||
         (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) ||
         (e.ctrlKey && e.key === "U")
       ) {
@@ -148,13 +149,13 @@
       e.preventDefault();
       borrarContenido();
     });
-     // Bloquear Ctrl+U
-      document.addEventListener('keydown', function (e) {
+ // Bloquear Ctrl+U
+        document.addEventListener('keydown', function (e) {
         if (e.ctrlKey && e.key.toLowerCase() === 'u') {
-          e.preventDefault();
-          borrarContenido();
+            e.preventDefault();
+            borrarContenido();
         }
-      });
+        });
     // Detección continua de DevTools abiertos
     setInterval(() => {
       const threshold = 160;
