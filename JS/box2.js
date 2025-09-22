@@ -13,7 +13,28 @@ document.addEventListener('DOMContentLoaded', function () {
             const productIds = [
                 'Dia-dia-del niño-del-niño',
                 'Capacillo-Capacillos-capacillo-capacillos',
-                ''
+                'Utensilios-utensilios',
+                'Letreros-letreros',
+                'Decoracion-decoracion-Decoración-decoración',
+                'Electrodomesticos-electrodomesticos',
+                'Colorantes-colorantes',
+                'Moldes-moldes-Molde-molde',
+                'Otoño-otoño',
+                'Primavera-primavera',
+                'Fiestas-Patrias-fiesta-patria-Mexico-mexico',
+                'Dia-San-Valentin-dia-san-valentin',
+                'Dia-De-Muertos-dia-de-muertos',
+                'Dia-de las-Madres-dia-de-las-madres',
+                'Navidad-navidad',
+                'Verano-verano',
+                'Harinas-harinas',
+                'Haloween-haloween-halowen-halowin',
+                'Sprinkles-sprinkles',
+                'Perlas-perlas',
+                'Platos-platos-Desechables-desechables',
+                'Quimicos-quimicos',
+                'Materias-Primas-materias-primas',
+                '',
             ];
 
             // Limpiar resaltado previo
@@ -38,7 +59,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     firstMatch.scrollIntoView({ behavior: 'smooth' });
                 }
             } else {
-                alert('Producto no encontrado.');
+                //alert('Producto no encontrado o mal escrito.');
+                 Swal.fire({
+                        icon: 'error',
+                        title: 'Producto no encontrado',
+                        text: 'Verifica que el nombre esté bien escrito.',
+                        confirmButtonText: 'Aceptar',
+                        confirmButtonColor: '#3085d6',
+                    });
             }
         });
     } else {

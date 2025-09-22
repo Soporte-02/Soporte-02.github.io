@@ -156,7 +156,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     firstMatch.scrollIntoView({ behavior: 'smooth' });
                 }
             } else {
-                alert('Producto no encontrado.');
+                //alert('Producto no encontrado o mal escrito.');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Producto no encontrado',
+                    text: 'Verifica que el nombre esté bien escrito.',
+                    confirmButtonText: 'Aceptar',
+                    confirmButtonColor: '#3085d6',
+                });
             }
         });
     } else {
