@@ -1015,7 +1015,7 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
   width: 300px;
 }
 .bodyhaloween{
-    background-image: url('../Img/ween.png'); /* Ruta a tu imagen */
+    background-image: url('../Img/haloween.png'); /* Ruta a tu imagen */
     background-repeat: no-repeat; /* No repite la imagen */
     background-size: cover; /* La imagen cubre todo el elemento */
     background-position: center; /* Centra la imagen */
