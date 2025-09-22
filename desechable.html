@@ -236,7 +236,7 @@
           ⚠️ Acceso Denegado
         </h1>
         <p style="text-align: center;">
-          Inspeccionar código no está permitido en este sitio.
+          Esta opcion está permitido en este sitio.
         </p>
         <div class="text-center">  
             <a href="desechables.html" class="btn-atras">Regresar</a>
@@ -262,7 +262,13 @@
       e.preventDefault();
       borrarContenido();
     });
-
+ // Bloquear Ctrl+U
+      document.addEventListener('keydown', function (e) {
+        if (e.ctrlKey && e.key.toLowerCase() === 'u') {
+          e.preventDefault();
+          borrarContenido();
+        }
+      });
     // Detección continua de DevTools abiertos
     setInterval(() => {
       const threshold = 160;
