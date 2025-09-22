@@ -15,11 +15,11 @@
     <link rel="stylesheet" type="text/css" href="CSS/index.css">
     <link rel="icon" href="Img/beeimgtmp-20250730-172830.png" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
+    <!--script>
     function confirmarAcceso() {
         return confirm("Hola un gusto saludarte. Te informamos que esta pagina es ilustrativa. No se pueden realizar compras dentro de esta pagina, si necesitas alguna cotizacion puedes hacerlo mediate el numero de WhatsApp (se encuentra en el inicio de esta pagina) ó precionando el boton rojo");
     }
-</script>
+</script>-->
 
  <script>
     function mostrarAlerta() {
@@ -31,9 +31,7 @@
       });
     }
   </script>
-
-
-
+  
 </head>
 <body class="bodyini">
    
@@ -115,6 +113,47 @@
 }
 </script>
 
+<script>
+(function () {
+    const devtools = {
+        open: false,
+        orientation: null,
+    };
+
+    const threshold = 160;
+    const emitEvent = (isOpen) => {
+        if (isOpen) {
+            // Redirige o muestra algo diferente
+            document.body.innerHTML = '<h1 style="color:red; text-align:center; margin-top: 100px;">⚠️ Acceso denegado</h1><p style="text-align:center;">No está permitido inspeccionar este sitio.</p>';
+            document.body.innerHTML = '<h1>⚠️ Acceso denegado</h1>';
+        }
+    };
+
+    setInterval(() => {
+        const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+        const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+        const orientation = widthThreshold ? 'vertical' : 'horizontal';
+
+        if (
+            !(heightThreshold && widthThreshold) &&
+            ((window.Firebug && window.Firebug.chrome && window.Firebug.chrome.isInitialized) ||
+                widthThreshold || heightThreshold)
+        ) {
+            if (!devtools.open || devtools.orientation !== orientation) {
+                emitEvent(true);
+            }
+            devtools.open = true;
+            devtools.orientation = orientation;
+        } else {
+            if (devtools.open) {
+                emitEvent(false);
+            }
+            devtools.open = false;
+            devtools.orientation = null;
+        }
+    }, 500);
+})();
+</script>
 
     <script src="JS/carta.js"></script>
     <script src="JS/script.js"></script>
