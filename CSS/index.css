@@ -908,6 +908,7 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
     }
 
 /******************Especiales***********************/
+/*dia de muertos*/
 .muertos{
   height: 300px;
   width: 300px;
@@ -921,11 +922,19 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
 }
 .muertos:hover{
     background: 
+        linear-gradient(rgba(41, 41, 41, 0.8), transparent),
+        url('../Img/Muertos.gif') center center / cover no-repeat;
+}
+@media (max-width: 480px) {
+  .muertos {
+      background: 
         /*linear-gradient(transparent, transparent),*/
         linear-gradient(rgba(41, 41, 41, 0.8), transparent),
         url('../Img/Muertos.gif') center center / cover no-repeat;
-        /*url('https://i.pinimg.com/originals/23/7a/c5/237ac54cdea81df47af9a65f895ee6db.gif') center center / cover no-repeat;*/
+  }
 }
+
+/*fiestas patrias*/
 .mexico{
   height: 300px;
   width: 300px;
@@ -934,7 +943,6 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
     background: 
         linear-gradient(rgba(255, 255, 255, 0.8), transparent),
         url('../Img/mexico.gif') center center / cover no-repeat;
-        /*url('https://i.pinimg.com/originals/23/7a/c5/237ac54cdea81df47af9a65f895ee6db.gif') center center / cover no-repeat;*/
     height: 300px;
     width: 300px;
 }
@@ -945,8 +953,15 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
     background-position: center; /* Centra la imagen */
     background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
 }
-
-
+@media (max-width: 480px) {
+  .mexico {
+       background: 
+        linear-gradient(rgba(255, 255, 255, 0.8), transparent),
+        url('../Img/mexico.gif') center center / cover no-repeat;
+    height: 300px;
+    width: 300px;
+  }
+}
 .alM {
   display: flex;
   width: 100%;
@@ -987,10 +1002,58 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
   word-break: break-word;
   padding: 0 10px;
 }
-
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 480px) {
   .al1M {
     font-size: 0.9rem;
   }
 }
+
+/*haloween*/
+.haloween{
+  height: 300px;
+  width: 300px;
+}
+.bodyhaloween{
+    background-image: url('../Img/ween.png'); /* Ruta a tu imagen */
+    background-repeat: no-repeat; /* No repite la imagen */
+    background-size: cover; /* La imagen cubre todo el elemento */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+}
+.haloween:hover{
+    background: 
+        linear-gradient(rgba(41, 41, 41, 0.8), transparent),
+        url('../Img/haloweenn.gif') center center / cover no-repeat;
+}
+@media (max-width: 480px) {
+  .haloween {
+      background: 
+        /*linear-gradient(transparent, transparent),*/
+        linear-gradient(rgba(41, 41, 41, 0.8), transparent),
+        url('../Img/haloweenn.gif') center center / cover no-repeat;
+  }
+}
+.alH{
+    background-color: #2B3359;
+    font-family: Cormorant Garamond;
+    margin-left: -30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.al1H{
+    font-family: Cormorant Garamond;
+    margin: 0;
+    font-size: 2rem;
+    margin-left: 50px;
+    color: orange;
+}
+ /* Responsivo */
+    @media (max-width: 600px) {
+      .alH h5 {
+        font-size: 1rem;
+        padding: 10px;
+      }
+    }
+
