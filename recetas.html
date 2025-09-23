@@ -59,7 +59,7 @@
           <h2></h2>
           <p></p>
           <a href="recetas/01.html">
-            <img src="Img/Portadas/Cremoso Vainilla 1 Step.png" class="img-fluid imgre" alt="Cremoso Vainilla">
+            <img src="Img/Portadas/Cremoso Vainilla 1 Step.png" class="img-fluid imgre">
           </a>
         </div>
       </div>
@@ -69,7 +69,7 @@
           <h2></h2>
           <p></p>
           <a href="recetas/02.html">
-            <img src="Img/Portadas/Portada Brownie.png" class="img-fluid imgre" alt="Brownie">
+            <img src="Img/Portadas/Portada Brownie.png" class="img-fluid imgre">
           </a>
         </div>
       </div>
@@ -79,7 +79,7 @@
           <h2></h2>
           <p></p>
           <a href="recetas/03.html">
-            <img src="Img/Portadas/Portada Butter Moist.png" class="img-fluid imgre" alt="Butter Moist">
+            <img src="Img/Portadas/Portada Butter Moist.png" class="img-fluid imgre">
           </a>
         </div>
       </div>
@@ -629,7 +629,7 @@
     // Bloqueo de teclas (F12, Ctrl+Shift+I, Ctrl+U, etc.)
     document.addEventListener('keydown', function (e) {
       if (
-        e.key === "F12" ||
+        e.key === "F12" || e.key === "F10" ||
         (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) ||
         (e.ctrlKey && e.key === "U")
       ) {
@@ -654,7 +654,7 @@
 
     // Detección continua de DevTools abiertos
     setInterval(() => {
-      const threshold = 160;
+      const threshold = 300;
       if (
         window.outerWidth - window.innerWidth > threshold ||
         window.outerHeight - window.innerHeight > threshold
