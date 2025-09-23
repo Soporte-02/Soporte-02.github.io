@@ -621,6 +621,13 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
   pointer-events: none;
 }
 
+/*recetas- imagen*/
+.uno{
+  width: 500px;
+  height: 700px;
+  border: 2px solid gray;
+  filter: drop-shadow(1px 1px 10px gray);
+}
 
 
 /**************BUSCADOR******************/

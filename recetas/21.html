@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="Materias primas el nivel">
+    <meta name="keywords" content="Nivel, el nivel, El Nivel, Materias primas el nivel">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	  <script src="https://kit.fontawesome.com/181a7f6408.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crema Miltra</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/index.css">
+    <link rel="icon" href="../Img/beeimgtmp-20250730-172830.png" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="bodyre">
+    <!-- Header con logo y buscador -->
+    <header class="custom-header">
+        <div class="header">
+          <a class="btn-atras" href="../recetas.html" title="Menu">atrás</a>
+        </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Logo -->
+                <div class="col-12 col-md-3 text-center mb-2 mb-md-0">
+                    <img src="../Img/Logotipo El Nivel blanco-01.png" class="img-fluid1" title="El Nivel">
+                </div>
+        </div>
+        </div><br>
+    </header>
+
+    <section>
+            <div class="text-center">
+                <img src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/Recetas/Receta%20Crema%20pastelera%20miltra.png?raw=true" class="img-fluid uno">
+            </div>
+    </section>            
+
+    <footer class="fter-rec">
+  <div class="footer-container">
+      <!-- Fila de logos -->
+      <div class="contenedor-imagenes">
+        <img src="../Img/redes/Caritas-01.png" class="img-resp">
+        <img src="../Img/Logo circulo nivel cursos-61.png" title="El Nivel" class="img-resp">
+        <img src="../Img/redes/Caritas-01.png" class="img-resp">
+      </div>
+      
+
+      <!-- Texto -->
+      <div class="footer-texto">
+        <h2 class="txtre">YA NOS SIGUES</h2>
+        <h2 class="txtre">EN TODAS NUESTRAS REDES</h2>
+      </div><br>
+
+      <!-- Redes sociales -->
+      <div class="footer-redes">
+          <div class="icono-red">
+            <a href="https://www.instagram.com/elnivel_materiasprimas?igsh=MXcydzk4cmRrbDJmZA==">
+              <img src="../Img/redes/Cuadro Instagram-01.png" title="Instagram" class="imagen-recetasr">
+            </a>
+            <span class="texto-icono txtre">elnivel_materiasprimas</span>
+        </div>
+
+        <div class="icono-red">
+          <a href=" https://www.facebook.com/share/1FQvprWTyh/">
+            <img src="../Img/redes/Cuadro face-01.png" title="Facebook" class="imagen-recetasr">
+          </a>
+          <span class="texto-icono txtre">EL NIVEL MATERIAS PRIMAS</span>
+        </div>
+
+        <div class="icono-red">
+          <a href="https://www.tiktok.com/@.elnivel?_t=ZS-8zfjT7k7BYN&_r=1">
+            <img src="../Img/redes/Cuadro Ti Tok-01.png" title="TikTok" class="imagen-recetasr">
+          </a>
+          <span class="texto-icono txtre">EL NIVEL, MATERIAS PRIMAS</span>
+        </div>
+
+        <div class="icono-red">
+          <a href="https://youtube.com/@elnivelmateriasprimas631?si=PanF5JVgsyFYVxmK">
+            <img src="../Img/redes/Cuadro Youtube-01.png" title="YouTube" class="imagen-recetasr">
+          </a>
+          <span class="texto-icono txtre">@elnivelmateriasprimas631</span>
+        </div>
+      </div>
+  </div>
+</footer>
+  
+
+  <!-- Protección contra inspección -->
+  <script>
+    // Borrar contenido si se detecta DevTools
+    function borrarContenido() {
+      document.body.innerHTML = `
+        <h1 style="color: red; text-align: center; margin-top: 100px;">
+          ⚠️ Acceso Denegado
+        </h1>
+        <p style="text-align: center;">
+          Esta opcion está permitido en este sitio.
+        </p>
+        <div class="text-center">  
+            <a href="21.html" class="btn-atras">Regresar</a>
+        </div>
+        `;
+    }
+
+    // Bloqueo de teclas (F12, Ctrl+Shift+I, Ctrl+U, etc.)
+    document.addEventListener('keydown', function (e) {
+      if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) ||
+        (e.ctrlKey && e.key === "U")
+      ) {
+        e.preventDefault();
+        borrarContenido();
+        return false;
+      }
+    });
+
+    // Bloquear clic derecho
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+      borrarContenido();
+    });
+    // Bloquear Ctrl+U
+    document.addEventListener('keydown', function (e) {
+      if (e.ctrlKey && e.key.toLowerCase() === 'u') {
+        e.preventDefault();
+        borrarContenido();
+      }
+    });
+
+    // Detección continua de DevTools abiertos
+    setInterval(() => {
+      const threshold = 160;
+      if (
+        window.outerWidth - window.innerWidth > threshold ||
+        window.outerHeight - window.innerHeight > threshold
+      ) {
+        borrarContenido();
+      }
+    }, 1000);
+  </script>
+
+  <!-- Código JavaScript ofuscado -->
+  <script>
+    // Este código ya está ofuscado (ejemplo)
+    var _0x5a2d = ["\x61\x6C\x65\x72\x74", "\x48\x6F\x6C\x61\x2C\x20\x67\x72\x61\x63\x69\x61\x73\x20\x70\x6F\x72\x20\x76\x69\x73\x69\x74\x61\x72\x20\x6D\x69\x20\x73\x69\x74\x69\x6F\x2E"];
+    function saludar() {
+      window[_0x5a2d[0]](_0x5a2d[1]);
+    };
+  </script>
+    <script src="../JS/carta.js"></script>
+    <script src="../JS/script.js"></script>
+    <script src="../JS/box.js"></script>
+</body>
+</html>
