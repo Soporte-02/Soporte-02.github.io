@@ -56,15 +56,13 @@ body::-webkit-scrollbar-thumb {
 
 /*section azul ID*/
 
-
 #sec{
     background-color: #0074C7;
     color: white;
     font-family: Cormorant Garamond;
     font-size: 50px;
     height: auto;
-    border-radius: 10px;
-       
+    border-radius: 10px;    
 }
 #sec1{
     background-color: #0074C7;
@@ -684,6 +682,15 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
 }
  
 /********************MENU********************/
+.mn{
+background-color: white;
+    border-radius: 15px;
+}
+.bodymenu{
+  background-image: url('../Img/dulce.png');
+    background-repeat: repeat;
+    background-size: 150px;
+}
 .imgre3{
     width: 200px;
     height: 200px;
@@ -857,11 +864,16 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
 .bodyca{
     /*background-color:#CCCCCC;*/
     background-color:#DDDDDD;
+    background-image: url('../Img/cocina3.com.png');
+    background-repeat: repeat;
+    background-size: 150px;
 }
 
 .imgre1{
     height: 300px;
     width: 300px;
+    background-color: #dedede;
+    border-radius: 15px;
 }
 .imgre1:hover{
    /* background-color: rgb(133, 137, 247);*/
@@ -918,6 +930,8 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
 .muertos{
   height: 300px;
   width: 300px;
+  background-color: #dedede;
+    border-radius: 15px;
 }
 .bodymuertos{
     background-image: url('../Img/diamuertos.png'); /* Ruta a tu imagen */
@@ -944,6 +958,8 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
 .mexico{
   height: 300px;
   width: 300px;
+    background-color: #dedede;
+    border-radius: 15px;
 }
 .mexico:hover{
     background: 
@@ -1019,6 +1035,8 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
 .haloween{
   height: 300px;
   width: 300px;
+    background-color: #dedede;
+    border-radius: 15px;
 }
 .bodyhaloween{
     background-image: url('../Img/haloween.png'); /* Ruta a tu imagen */
@@ -1063,3 +1081,79 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
       }
     }
 
+/*AMOR*/
+.lov{
+    background-color: /*#eb4242*/ pink;
+    width: auto 100%;
+    height: 110px; 
+}
+#amo{
+    background-color: /*#0074C7*/ pink;
+    color: red;
+    font-family: Cormorant Garamond;
+    font-size: 50px;
+    height: auto;
+    border-radius: 10px;    
+}
+#amo1{
+    background-color: pink;
+    color: red;
+    font-family: open sans-serif;
+    
+
+}
+
+#imgsec{
+   filter: drop-shadow(2px 3px 20px rgb(251, 251, 251)); 
+}
+
+
+.amor{
+  height: 300px;
+  width: 300px;
+    background-color: #dedede;
+    border-radius: 15px;
+}
+.bodyamor{
+    background-image: url('../Img/amoor.png'); /* Ruta a tu imagen */
+    background-repeat: no-repeat; /* No repite la imagen */
+    background-size: cover; /* La imagen cubre todo el elemento */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+}
+.amor:hover{
+    background: 
+        linear-gradient(rgba(231, 226, 226, 0.8), transparent),
+        url('../Img/amor.gif') center center / cover no-repeat;
+}
+@media (max-width: 480px) {
+  .amor {
+      background: 
+        /*linear-gradient(transparent, transparent),*/
+        linear-gradient(rgba(231, 226, 226, 0.8), transparent),
+        url('../Img/amor.gif') center center / cover no-repeat;
+  }
+}
+
+.alA{
+    background-color: pink;
+    font-family: Cormorant Garamond;
+    margin-left: -30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.al1A{
+  font-family: Cormorant Garamond;
+    margin: 0;
+    font-size: 2rem;
+    margin-left: 50px;
+    color: red;
+}
+ /* Responsivo */
+    @media (max-width: 600px) {
+      .alA h5 {
+        font-size: 1rem;
+        padding: 10px;
+      }
+    }
