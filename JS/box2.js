@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const searchTerm = searchInput.value.toLowerCase().trim();
 
             const productIds = [
-                'Dia-dia-del niño-del-niño',
+                'Dia-dia-del niño-del-niño-niños',
                 'Capacillo-Capacillos-capacillo-capacillos',
                 'Utensilios-utensilios',
                 'Letreros-letreros',

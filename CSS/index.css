@@ -39,6 +39,8 @@ body::-webkit-scrollbar-thumb {
             margin-bottom: 15px; /* Espacio debajo del producto resaltado */
             background-color: #fcfcfc; 
             border-radius: 15px;
+            height: 322px;
+            width: 322px;
         }
     
 
@@ -686,11 +688,11 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
 background-color: white;
     border-radius: 15px;
 }
-.bodymenu{
+/*.bodymenu{
   background-image: url('../Img/dulce.png');
     background-repeat: repeat;
     background-size: 150px;
-}
+}*/
 .imgre3{
     width: 200px;
     height: 200px;

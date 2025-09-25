@@ -32,7 +32,7 @@
 
             <center>
                 <section>
-                    <a href="menu.html" class="a" onclick="return mostrarAlerta(event);"><img src="Img/Logo circulo nivel cursos-61.png" title="Entrar a menu" class="bini"></a>
+                    <a href="pages/menu.html" class="a" onclick="return mostrarAlerta(event);"><img src="Img/Logo circulo nivel cursos-61.png" title="Entrar a menu" class="bini"></a>
                 </section>
 
                     <div class="wrapper">
@@ -86,7 +86,7 @@
     allowOutsideClick: false,
     didOpen: () => {
       document.getElementById('btnContinuar').addEventListener('click', () => {
-        window.location.href = 'menu.html';
+        window.location.href = 'pages/menu.html';
       });
 
       document.getElementById('btnContacto').addEventListener('click', () => {
@@ -108,12 +108,13 @@
     // Borrar contenido si se detecta DevTools
     function borrarContenido() {
       document.body.innerHTML = `
-        <h1 style="color: red; text-align: center; margin-top: 100px;">
-          ⚠️ Acceso Denegado
-        </h1>
-        <p style="text-align: center;">
-          Esta opcion está permitido en este sitio.
-        </p>
+        <div style="background-color: black; height: 170px; width: 400px; border-radius: 15px; justify-content: center;" class="container text-center my-4">
+            <h1 style="color: red; text-align: center; margin-top: 100px;">
+            ⚠️ Acceso Denegado
+            </h1>
+            <p style="text-align: center; color:white;">
+            Esta opcion está permitido en este sitio.
+            </p>
         <div class="text-center">  
             <a href="index.html" class="btn-atras">Regresar</a>
         </div>
@@ -168,8 +169,8 @@
 
   
 
-    <script src="JS/carta.js"></script>
-    <script src="JS/script.js"></script>
-    <script src="JS/box.js"></script>
+    <script src="../JS/carta.js"></script>
+    <script src="../JS/script.js"></script>
+    <script src="../JS/box.js"></script>
 </body>
 </html>
