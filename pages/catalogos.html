@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head> 
-  
     <meta name="description" content="Materias primas el nivel">
     <meta name="keywords" content="Nivel, el nivel, El Nivel, Materias primas el nivel">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
-	<script src="https://kit.fontawesome.com/181a7f6408.js" crossorigin="anonymous"></script>
+	  <script src="https://kit.fontawesome.com/181a7f6408.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin='anonymous'></script>
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="viewport" content="width = 1050, user-scalable = no" />
     <meta charset="UTF-8">
@@ -19,7 +16,6 @@
     <link rel="stylesheet" type="text/css" href="../CSS/index.css">
     <link rel="icon" href="../Img/beeimgtmp-20250730-172830.png" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 </head>
 <body class="bodyca">
     <!-- Header con logo y buscador -->
@@ -46,14 +42,14 @@
         </div>
     </header>
    
-    <section class="container text-center my-4" id="sec">
-        <div>
-            <img src="../Img/Personaje Nivel-01.png" class="personaje img-fluid mb-3" id="imgsec" title="Personaje Nivel">
-            <h1 id="sec">Catálogos</h1>
-            <h2 id="sec1">"Nuestros productos a tu disposición"</h2>
-        </div>
-    </section><br>
-
+            <!-- Sección principal -->
+        <section class="seccion-recetas text-center">
+              <div class="contenido-recetas">
+                  <img src="../Img/Personaje Nivel-01.png" class="personaje img-fluid mb-3" id="imgsec3" alt="Personaje Nivel" title="Personaje Nivel">
+                  <h1 class="titulo">Recetas</h1>
+                  <h2 class="subtitulo">"Recetas con corazón, insumos con El Nivel"</h2>
+              </div>
+        </section><br>
    
     <section class="container my-5">
         <div class="row justify-content-center">
@@ -62,8 +58,8 @@
                 <div id="Dia-dia-del niño-del-niño-niños" class="text-center">
                     <h2></h2>
                     <p></p>
-                  <a href="../pages/error404.html">
-                    <img src="../Img/Portadas Catalagos/Portadas Web-01.png" class="img-fluid imgre1">
+                  <a href="../pages/niño.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-01.png" class="img-fluid niños">
                   </a>
                 </div>
             </div>
@@ -194,8 +190,8 @@
                 <div id="Dia-de las-Madres-dia-de-las-madres" class="text-center">
                     <h2></h2>
                     <p></p>
-                  <a href="../pages/error404.html">
-                    <img src="../Img/Portadas Catalagos/Portadas Web-15.png" class="img-fluid imgre1">
+                  <a href="../pages/madres.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-15.png" class="img-fluid madres">
                   </a>
                 </div>
             </div>
@@ -289,9 +285,6 @@
                   </a>
                 </div>
             </div>
-
-            
-
         </div>
     </section><br>
 
@@ -303,14 +296,11 @@
         <img src="../Img/Logo circulo nivel cursos-61.png" title="El Nivel" class="img-resp">
         <img src="../Img/redes/Caritas-01.png" class="img-resp">
       </div>
-      
-
       <!-- Texto -->
       <div class="footer-texto">
         <h2 class="txtre">YA NOS SIGUES</h2>
         <h2 class="txtre">EN TODAS NUESTRAS REDES</h2>
       </div><br>
-
       <!-- Redes sociales -->
       <div class="footer-redes">
           <div class="icono-red">
@@ -346,7 +336,6 @@
 
   <!-- Protección contra inspección -->
   <script>
-    // Borrar contenido si se detecta DevTools
     function borrarContenido() {
       document.body.innerHTML = `
        <div style="background-color: black; height: 170px; width: 400px; border-radius: 15px; justify-content: center;" class="container text-center my-4">
@@ -361,7 +350,6 @@
             <a href="../pages/catalogos.html" class="btn-atras">Regresar</a>
         </div>`;
     }
-
     // Bloqueo de teclas (F12, Ctrl+Shift+I, Ctrl+U, etc.)
     document.addEventListener('keydown', function (e) {
       if (
@@ -374,7 +362,6 @@
         return false;
       }
     });
-
     // Bloquear clic derecho
     document.addEventListener('contextmenu', function (e) {
       e.preventDefault();
@@ -387,7 +374,6 @@
           borrarContenido();
         }
       });
-
     // Detección continua de DevTools abiertos
     setInterval(() => {
       const threshold = 300;
@@ -402,7 +388,6 @@
 
   <!-- Código JavaScript ofuscado -->
   <script>
-    // Este código ya está ofuscado (ejemplo)
     var _0x5a2d = ["\x61\x6C\x65\x72\x74", "\x48\x6F\x6C\x61\x2C\x20\x67\x72\x61\x63\x69\x61\x73\x20\x70\x6F\x72\x20\x76\x69\x73\x69\x74\x61\x72\x20\x6D\x69\x20\x73\x69\x74\x69\x6F\x2E"];
     function saludar() {
       window[_0x5a2d[0]](_0x5a2d[1]);

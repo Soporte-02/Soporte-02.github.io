@@ -58,7 +58,7 @@ body::-webkit-scrollbar-thumb {
 
 /*section azul ID*/
 
-#sec{
+/*#sec{
     background-color: #0074C7;
     color: white;
     font-family: Cormorant Garamond;
@@ -75,7 +75,7 @@ body::-webkit-scrollbar-thumb {
 
 #imgsec{
    filter: drop-shadow(2px 3px 20px rgb(251, 251, 251)); 
-}
+}*/
 
 .btsec{
     background-color: #0074C7;
@@ -87,39 +87,88 @@ body::-webkit-scrollbar-thumb {
 a{
     color: white;
 }
-/*section azul CLASS*/
-.sec{
+/****/
+.btsec{
+    background-color: #0074C7;
+    color:white;
+    border-radius: 30px;
+    height: auto;
+    width: auto;
+}
+a{
+    color: white;
+}
+/***************************/
+
+
+/* Sección de fondo completo */
+.seccion-recetas {
+    width: 100vw;
     background-color: #0074C7;
     color: white;
     font-family: Cormorant Garamond;
-    font-size: 50px;
-}
-.sec1{
-    background-color: #0074C7;
-    color: white;
-    font-family: open sans-serif;
-
+    border-radius: 0;
+    padding: 3rem 1rem;
+    margin: 0;
 }
 
-.imgsec{
+/* Contenido centrado */
+.contenido-recetas {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Imagen */
+#imgsec3 {
     height: 300px;
     width: 300px;
-   
-   filter: drop-shadow(2px 3px 20px rgb(251, 251, 251)); 
+    max-width: 100%;
+    filter: drop-shadow(2px 3px 20px rgb(251, 251, 251));
 }
 
-.btsec{
-    background-color: #0074C7;
-    color:white;
-    border-radius: 30px;
-    height: auto;
-    width: auto;
-}
-a{
-    color: white;
+/* Títulos */
+.titulo {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
 }
 
+.subtitulo {
+    font-size: 1.5rem;
+    font-style: italic;
+}
 
+/* Responsividad */
+@media (max-width: 768px) {
+    #imgsec3 {
+        height: 200px;
+        width: 200px;
+    }
+
+    .titulo {
+        font-size: 2.2rem;
+    }
+
+    .subtitulo {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #imgsec3 {
+        height: 150px;
+        width: 150px;
+    }
+
+    .titulo {
+        font-size: 1.8rem;
+    }
+
+    .subtitulo {
+        font-size: 1rem;
+    }
+}
+
+/**************************/
 /*/*ELEMENTOS RESPONSIVOS*/
  /* Header con fondo */
         .custom-header {
@@ -466,6 +515,9 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
 }
 .bodyre{
     background-color:#EBE7DD;
+    background-image: url('../Img/Recetas-02.png');
+    background-repeat: repeat;
+    background-size: 150px;
 }
 .imgre:hover{
     background-color: rgb(247, 133, 247);
@@ -698,7 +750,7 @@ background-color: white;
     height: 200px;
 }
 .amn:hover{
-    background-color: rgba(187, 154, 241, 0.537);
+   background-color: rgba(187, 154, 241, 0.537);
    border-radius: 15px;
    border:2px solid #2B65A3;
 }
@@ -866,7 +918,7 @@ background-color: white;
 .bodyca{
     /*background-color:#CCCCCC;*/
     background-color:#DDDDDD;
-    background-image: url('../Img/cocina3.com.png');
+    background-image: url('../Img/cocina0.png');
     background-repeat: repeat;
     background-size: 150px;
 }
@@ -1159,3 +1211,59 @@ background-color: white;
         padding: 10px;
       }
     }
+
+/*dia de los niños*/
+.niños{
+  height: 300px;
+  width: 300px;
+  background-color: #dedede;
+    border-radius: 15px;
+}
+.bodyniños{
+    background-image: url('../Img/niño.png'); /* Ruta a tu imagen */
+    background-repeat: no-repeat; /* No repite la imagen */
+    background-size: cover; /* La imagen cubre todo el elemento */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+}
+.niños:hover{
+    background: 
+        linear-gradient(rgba(231, 226, 226, 0.8), transparent),
+        url('../Img/niñoo.gif') center center / cover no-repeat;
+}
+@media (max-width: 480px) {
+  .niños {
+      background: 
+        /*linear-gradient(transparent, transparent),*/
+        linear-gradient(rgba(231, 226, 226, 0.8), transparent),
+        url('../Img/niñoo.gif') center center / cover no-repeat;
+  }
+}
+
+/*dia de las madres*/
+.madres{
+  height: 300px;
+  width: 300px;
+  background-color: #dedede;
+    border-radius: 15px;
+}
+.bodymadres{
+    background-image: url('../Img/mamáa.png'); /* Ruta a tu imagen */
+    background-repeat: no-repeat; /* No repite la imagen */
+    background-size: cover; /* La imagen cubre todo el elemento */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+}
+.madres:hover{
+    background: 
+        linear-gradient(rgba(231, 226, 226, 0.8), transparent),
+        url('../Img/mamá.gif') center center / cover no-repeat;
+}
+@media (max-width: 480px) {
+  .madres {
+      background: 
+        /*linear-gradient(transparent, transparent),*/
+        linear-gradient(rgba(41, 41, 41, 0.8), transparent),
+        url('../Img/mamá.gif') center center / cover no-repeat;
+  }
+}
