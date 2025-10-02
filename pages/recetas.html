@@ -33,16 +33,17 @@
 
                 <!-- Buscador -->
                 <div class="col-12 col-md-9">
-                    <form id="productSearchForm" class="d-flex flex-column flex-md-row justify-content-center">
-                        <input type="text" id="searchInput" class="form-control mb-2 mb-md-0 me-md-2" placeholder="Buscar Producto...">
-                        <button type="submit" class="btn btn-light">Buscar</button>
+                    <!-- 🔎 Formulario de búsqueda -->
+                    <form id="productSearchForm" class="mb-3 d-flex">
+                      <input type="text" id="searchInput" class="form-control me-2" placeholder="Buscar receta...">
+                      <button type="submit" class="btn btn-light">Buscar</button>
                     </form>
                 </div>
             </div>
         </div>
     </header>
 
-          <!-- Sección principal -->
+     <!-- Sección principal -->
         <section class="seccion-recetas text-center">
               <div class="contenido-recetas">
                   <img src="../Img/Personaje Nivel-01.png" class="personaje img-fluid mb-3" id="imgsec3" alt="Personaje Nivel" title="Personaje Nivel">
@@ -51,511 +52,22 @@
               </div>
         </section>
 
-  <section class="container my-5">
-  <div class="row justify-content-center">
+<!-- 🥗 Contenedor de recetas -->
+<section class="container my-5">
+  <div class="row justify-content-center" id="productos-container"></div>
 
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="cremoso-vainilla-1-step" class="text-center">
-          <h2></h2>
-          <p></p>
-          <a href="../recetas/01.html">
-            <img src="../Img/Portadas/Cremoso Vainilla 1 Step.png" class="img-fluid imgre">
-          </a>
-        </div>
-      </div>
+  <div class="text-center">
+    <button id="load-more-btn" class="btn btn-primary">Cargar más</button>
+  </div>
 
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="brownie" class="text-center">
-          <h2></h2>
-          <p></p>
-          <a href="../recetas/02.html">
-            <img src="../Img/Portadas/Portada Brownie.png" class="img-fluid imgre">
-          </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="butter-moist" class="text-center">
-          <h2></h2>
-          <p></p>
-          <a href="../recetas/03.html">
-            <img src="../Img/Portadas/Portada Butter Moist.png" class="img-fluid imgre">
-          </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="buñuelos" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/04.html">
-                <img src="../Img/Portadas/Portada Buñuelos.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="cheesecake-de-frambueza" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/05.html">
-                <img src="../Img/Portadas/Portada Cheesecake de Frambueza.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="vainilla-cremoso" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/06.html">
-                <img src="../Img/Portadas/Portada Vainilla Cremoso.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="chocolate-delvis-1-2-3" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/07.html">
-              <img src="../Img/Portadas/Portada Chocolate Delvis 1-2-3.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="chocolate-holandes" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/08.html">
-              <img src="../Img/Portadas/Portada Chocolate Holandés.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="chocolate-ultra-1-step" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/09.html">
-              <img src="../Img/Portadas/Portada Chocolate Ultra 1 Step.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="chocolate-y-vainilla" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/10.html">
-              <img src="../Img/Portadas/Portada Chocolate y Vainilla.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="concha-de-corazon" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/11.html">
-              <img src="../Img/Portadas/Portada Concha de corazon.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="conchas-integral" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/12.html">
-              <img src="../Img/Portadas/Portada Conchas Integral.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="cream-cake-chocolate-hr" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/13.html">
-              <img src="../Img/Portadas/Portada Cream Cake Chocolate HR.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="cream-cake-chocolate" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/14.html">
-              <img src="../Img/Portadas/Portada Cream Cake Chocolate.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-      
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="cream-cake-clasico-vainilla" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/15.html">
-              <img src="../Img/Portadas/Portada Cream Cake Clasico Vainilla.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-      
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-      <div id="cream-cake-clasico-chocolate" class="text-center">
-            <h2></h2>
-            <p></p>
-            <a href="../recetas/16.html">
-            <img src="../Img/Portadas/Portada Cream Cake Clásico Chocolate.png" class="img-fluid imgre">
-            </a>
-      </div>
+  <div id="loading-spinner" class="text-center" style="display:none;">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Cargando...</span>
     </div>
+  </div>
+</section>
 
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="cream-cake-vainilla-hr" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/17.html">
-              <img src="../Img/Portadas/Portada Cream Cake Vainilla HR.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
 
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="crema-especial-chocolate" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/18.html">
-              <img src="../Img/Portadas/Portada Crema Especial Chocolate.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>   
-      
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="crema-especial-vainilla" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/19.html">
-              <img src="../Img/Portadas/Portada Crema Especial Vainilla.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="crema-pastelera-frio" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/20.html">
-              <img src="../Img/Portadas/Portada Crema Pastelera Frio.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="crema-pastelera-miltra" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/21.html">
-              <img src="../Img/Portadas/Portada Crema Pastelera Miltra.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="cremoso-chocolate-1-Step" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/22.html">
-              <img src="../Img/Portadas/Portada Cremoso Chocolate 1 Step.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="cremoso-vainilla" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/23.html">
-              <img src="../Img/Portadas/Portada Cremoso Vainilla.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="deleite-chocolate" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/24.html">
-              <img src="../Img/Portadas/Portada Deleite Chocolate.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="delvis-vainilla-deleite" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/25.html">
-              <img src="../Img/Portadas/Portada Delvis Vainilla.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="donas-integral" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/26.html">
-              <img src="../Img/Portadas/Portada Donas Integral.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="esponja-chocolate" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/27.html">
-              <img src="../Img/Portadas/Portada Esponja Chocolate.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-      
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="esponja-de-vainilla" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/28.html">
-              <img src="../Img/Portadas/Portada Esponja de Vainilla.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="galletas-integral" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/29.html" target="_blank">
-              <img src="../Img/Portadas/Portada Galletas Integral.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="galletas-red-velvet" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/30.html">
-              <img src="../Img/Portadas/Portada Galletas red velvet.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-    
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="harina-satin-cream-cake" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/31.html">
-              <img src="../Img/Portadas/Portada Harina Satin Cream Cake.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="mix-retencion-chocolate" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/32.html">
-              <img src="../Img/Portadas/Portada Maxima Retencion Chocolate.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="mix-retencion-vainilla" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/33.html">
-              <img src="../Img/Portadas/Portada Maxima Retencion Vainilla.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="merengue-rico" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/34.html">
-              <img src="../Img/Portadas/Portada Merengue Rico.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="mix-crepas" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/35.html">
-              <img src="../Img/Portadas/Portada Mix Crepas.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="mix-esponja-lacteo" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/36.html">
-              <img src="../Img/Portadas/Portada Mix Esponja Lacteo.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="mix-vainilla-amarilla" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/37.html">
-              <img src="../Img/Portadas/Portada Mix Vainilla Amarilla.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="mix-vainilla-ultra" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/38.html">
-              <img src="../Img/Portadas/Portada Mix Vainilla Ultra.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="mix-zanahoria" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/39.html">
-              <img src="../Img/Portadas/Portada Mix Zanahoria.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="mix-deleite-chocolate" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/40.html">
-              <img src="../Img/Portadas/Portada Mix deleite chocolate.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="pan-de muerto-chocolate" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/41.html">
-              <img src="../Img/Portadas/Portada Pan de Muerto Chocolate.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="pan-de muertos" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/42.html">
-              <img src="../Img/Portadas/Portada Pan de Muertos.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="panettone" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/43.html">
-              <img src="../Img/Portadas/Portada Panettone.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="panqueletas-integral" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/44.html">
-              <img src="../Img/Portadas/Portada Panqueletas Integral.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="pastel-amarillo-1-2-3" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/45.html">
-              <img src="../Img/Portadas/Portada Pastel Amarillo 1-2-3.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="pastel-red-velvet" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/46.html">
-              <img src="../Img/Portadas/Portada Pastel Red Velvet.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="pastel-de-frutos-secos" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/47.html">
-              <img src="../Img/Portadas/Portada Pastel de frutos secos.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="red-velvet" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/48.html">
-              <img src="../Img/Portadas/Portada Red Velvet.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="rosca-de-reyes" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/49.html">
-              <img src="../Img/Portadas/Portada Rosca de Reyes.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-        <div id="suggar-free" class="text-center">
-            <h2></h2>
-              <p></p>
-              <a href="../recetas/50.html">
-              <img src="../Img/Portadas/Portada Suggar Free.png" class="img-fluid imgre">
-              </a>
-        </div>
-      </div>
-
-    </div>
-</section><br>
 
 <footer class="fter-rec">
   <div class="footer-container">
@@ -612,14 +124,12 @@
     // Borrar contenido si se detecta DevTools
     function borrarContenido() {
       document.body.innerHTML = `
-        <div style="background-color: black; height: 170px; width: 400px; border-radius: 15px; justify-content: center;" class="container text-center my-4">
-            <h1 style="color: red; text-align: center; margin-top: 100px;">
-            ⚠️ Acceso Denegado
-            </h1>
-            <p style="text-align: center; color:white;">
-            Esta opcion está permitido en este sitio.
-          </p>
-        </div>
+        <h1 style="color: red; text-align: center; margin-top: 100px;">
+          ⚠️ Acceso Denegado
+        </h1>
+        <p style="text-align: center;">
+          Esta opcion está permitido en este sitio.
+        </p>
         <div class="text-center">  
             <a href="../pages/recetas.html" class="btn-atras">Regresar</a>
         </div>
@@ -674,7 +184,7 @@
   </script>
     <script src="../JS/carta.js"></script>
     <script src="../JS/script.js"></script>
-    <script src="../JS/box.js"></script>
+    <script src="../JS/boxsec.js"></script>
 
 </body>
 </html>

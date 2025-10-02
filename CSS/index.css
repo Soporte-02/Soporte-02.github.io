@@ -459,6 +459,11 @@ main{
     font-weight: normal;
     font-family: Cormorant Garamond;
 }
+.ih31{
+    color: white;
+    font-weight: normal;
+    font-family: Cormorant Garamond;
+}
 /********numero y img whatsapp**********/
 .ih32{
     color: white;
@@ -717,7 +722,6 @@ max-width: 250px;  /* tamaño máximo del logo en pantallas grandes */
     border-right: 2px solid;
     font-family: Cormorant Garamond;
     font-size: 2em;
-    
 }
 
 @keyframes typing{
