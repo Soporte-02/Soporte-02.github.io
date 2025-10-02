@@ -1,8 +1,8 @@
-    // Inicializamos el mapa
+ // Inicializamos el mapa
   var map0 = L.map('map0').setView([21.511442020908092, -104.89671158470568], 20); // Coordenadas de León, México
   // Capa de OpenStreetMap
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
+    attribution: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>'
   }).addTo(map0);
   // Marcador
   L.marker([21.511442020908092, -104.89671158470568]).addTo(map0)
@@ -16,6 +16,61 @@
       }, 100); // pequeño delay para que se redibuje bien
     }
   });
+
+
+   // Función para verificar conexión
+ /* function checkConnection() {
+    if (!navigator.onLine) {
+      Swal.fire({
+        icon: "error",
+        title: "Sin conexión",
+        text: "Es necesario estar conectado a internet para visualizar el contenido."
+      });
+    }
+  }
+
+  // Escuchar cuando se pierde la conexión
+  window.addEventListener("offline", () => {
+    Swal.fire({
+      icon: "warning",
+      title: "Conexión perdida",
+      text: "Has perdido la conexión a internet. Vuelve a conectarte para ver el mapa."
+    });
+  });
+
+  // Escuchar cuando vuelve la conexión
+  window.addEventListener("online", () => {
+    Swal.fire({
+      icon: "success",
+      title: "Conexión restablecida",
+      text: "Ya puedes visualizar el mapa correctamente."
+    });
+  });
+
+  // Verificamos al cargar la página
+  checkConnection();
+
+  // --- Inicializamos el mapa ---
+  var map0 = L.map('map0').setView([21.511442020908092, -104.89671158470568], 20);
+
+  // Capa de OpenStreetMap
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
+  }).addTo(map0);
+
+  // Marcador
+  L.marker([21.511442020908092, -104.89671158470568]).addTo(map0)
+    .bindPopup("¡Hola! Este es Nivel Leon.")
+    .openPopup();
+
+  // --- Fix para cuando el mapa está dentro de un popover ---
+  document.getElementById("modal").addEventListener("toggle", (e) => {
+    if (e.newState === "open") {
+      setTimeout(() => {
+        map0.invalidateSize();
+      }, 100); // pequeño delay para que se redibuje bien
+    }
+  });*/
 
 
   var map1 = L.map('map1').setView([21.511327797135785, -104.89667237813504], 20); // Coordenadas de León, México
