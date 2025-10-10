@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta name="description" content="Materias primas el nivel">
+    <meta name="keywords" content="Nivel, el nivel, El Nivel, Materias primas el nivel">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	  <script src="https://kit.fontawesome.com/181a7f6408.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin='anonymous'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width = 1050, user-scalable = no" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogos</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/index.css">
+    <link rel="icon" href="../Img/beeimgtmp-20250730-172830.png" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="bodyca">
+    <!-- Header con logo y buscador -->
+    <header class="custom-header">
+        <div class="header">
+          <a class="btn-atras" href="../pages/menu.html" title="Menu">atrás</a>
+        </div>
+
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Logo -->
+                <div class="col-12 col-md-3 text-center mb-2 mb-md-0">
+                    <img src="../Img/Logotipo El Nivel blanco-01.png" class="img-fluid1" title="El Nivel">
+                </div>
+
+                <!-- Buscador -->
+                <div class="col-12 col-md-9">
+                    <form id="productSearchForm" class="d-flex flex-column flex-md-row justify-content-center">
+                        <input type="text" id="searchInput" class="form-control mb-2 mb-md-0 me-md-2" placeholder="Buscar Catalogo...">
+                        <button type="submit" class="btn btn-light">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+   
+            <!-- Sección principal -->
+        <section class="seccion-recetas text-center">
+              <div class="contenido-recetas">
+                  <img src="../Img/Personaje Nivel-01.png" class="personaje img-fluid mb-3" id="imgsec3" alt="Personaje Nivel" title="Personaje Nivel">
+                  <h1 class="titulo">Catalogos</h1>
+                  <h2 class="subtitulo">"Nuestros productos"</h2>
+              </div>
+        </section><br>
+   
+    <section class="container my-5">
+        <div class="row justify-content-center">
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div id="Dia-dia-del niño-del-niño-niños-dia del niño" class="text-center">
+                    <h2></h2>
+                    <p></p>
+                  <a href="../pages/niño.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-01.png" class="img-fluid niños">
+                  </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div id="Capacillo-Capacillos-capacillo-capacillos" class="text-center">
+                    <h2></h2>
+                    <p></p>
+                  <a href="../pages/capacillo.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-02.png" class="img-fluid imgre1">
+                  </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div id="Utensilios-utensilios" class="text-center">
+                    <h2></h2>
+                    <p></p>
+                  <a href="../pages/utencilios.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-03.png" class="img-fluid imgre1">
+                  </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div id="Letreros-letreros" class="text-center">
+                    <h2></h2>
+                    <p></p>
+                  <a href="../pages/letreros.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-04.png" class="img-fluid imgre1">
+                  </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div id="Decoracion-decoracion-Decoración-decoración" class="text-center">
+                    <h2></h2>
+                    <p></p>
+                  <a href="../pages/decoracion.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-05.png" class="img-fluid imgre1">
+                  </a>
+                </div>
+            </div>
+
+            <!--Coradores 06 se junta con Utencilios-->
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div id="Electrodomesticos-electrodomesticos" class="text-center">
+                    <h2></h2>
+                    <p></p>
+                  <a href="../pages/electrodomesticos.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-07.png" class="img-fluid imgre1">
+                  </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div id="Colorantes-colorantes-colorante-Colorante" class="text-center">
+                    <h2></h2>
+                    <p></p>
+                  <a href="../pages/colorantes.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-08.png" class="img-fluid imgre1">
+                  </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div id="Moldes-moldes-Molde-molde" class="text-center">
+                    <h2></h2>
+                    <p></p>
+                  <a href="../pages/moldes.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-09.png" class="img-fluid imgre1">
+                  </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div id="Otoño-otoño" class="text-center">
+                    <h2></h2>
+                    <p></p>
+                  <a href="../pages/error404.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-10.png" class="img-fluid imgre1">
+                  </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div id="Primavera-primavera" class="text-center">
+                    <h2></h2>
+                    <p></p>
+                  <a href="../pages/primavera.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-11.png" class="img-fluid imgre1">
+                  </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div id="Fiestas-Patrias-fiesta-patria-Mexico-mexico-fiestas patrias" class="text-center">
+                    <h2></h2>
+                    <p></p>
+                  <a href="../pages/patria.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-12.png" class="img-fluid mexico">
+                  </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div id="Dia-San-Valentin-dia-san-valentin" class="text-center">
+                    <h2></h2>
+                    <p></p>
+                  <a href="../pages/sanvalentin.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-13.png" class="img-fluid amor">
+                  </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div id="Dia-De-Muertos-dia-de-muertos" class="text-center">
+                    <h2></h2>
+                    <p></p>
+                  <a href="../pages/muertos.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-14.png" class="img-fluid muertos">
+                  </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div id="Dia-de las-Madres-dia-de-las-madres" class="text-center">
+                    <h2></h2>
+                    <p></p>
+                  <a href="../pages/madres.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-15.png" class="img-fluid madres">
+                  </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div id="Navidad-navidad" class="text-center">
+                    <h2></h2>
+                    <p></p>
+                  <a href="../pages/error404.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-16.png" class="img-fluid imgre1">
+                  </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div id="Verano-verano" class="text-center">
+                    <h2></h2>
+                    <p></p>
+                  <a href="../pages/verano.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-17.png" class="img-fluid verano">
+                  </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div id="Harinas-harinas" class="text-center">
+                    <h2></h2>
+                    <p></p>
+                  <a href="../pages/harinas.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-18.png" class="img-fluid imgre1">
+                  </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div id="Haloween-haloween-halowen-halowin" class="text-center">
+                    <h2></h2>
+                    <p></p>
+                  <a href="../pages/haloween.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-19.png" class="img-fluid haloween">
+                  </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div id="Sprinkles-sprinkles" class="text-center">
+                    <h2></h2>
+                    <p></p>
+                  <a href="../pages/sprin.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-20.png" class="img-fluid imgre1">
+                  </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div id="Perlas-perlas" class="text-center">
+                    <h2></h2>
+                    <p></p>
+                  <a href="../pages/perlas.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-21.png" class="img-fluid imgre1">
+                  </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div id="Platos-platos-Desechables-desechables" class="text-center">
+                    <h2></h2>
+                    <p></p>
+                  <a href="../pages/desechable.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-22.png" class="img-fluid imgre1">
+                  </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div id="Quimicos-quimicos" class="text-center">
+                    <h2></h2>
+                    <p></p>
+                  <a href="../pages/error404.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-23.png" class="img-fluid imgre1">
+                  </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div id="Materias-Primas-materias-primas" class="text-center">
+                    <h2></h2>
+                    <p></p>
+                  <a href="../pages/materiasprimas.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-24.png" class="img-fluid imgre1">
+                  </a>
+                </div>
+            </div>
+
+             <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div id="Jarabe-Monin-jarabe-monin" class="text-center">
+                    <h2></h2>
+                    <p></p>
+                  <a href="../pages/monin.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-25.png" class="img-fluid imgre1">
+                  </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div id="Resposteria-reposteria" class="text-center">
+                    <h2></h2>
+                    <p></p>
+                  <a href="../pages/error404.html">
+                    <img src="../Img/Portadas Catalagos/Portadas Web-26.png" class="img-fluid imgre1">
+                  </a>
+                </div>
+            </div>
+
+        </div>
+    </section><br>
+
+    <footer class="fter-rec">
+  <div class="footer-container">
+      <!-- Fila de logos -->
+      <div class="contenedor-imagenes">
+        <img src="../Img/redes/Caritas-01.png" class="img-resp">
+        <img src="../Img/Logo circulo nivel cursos-61.png" title="El Nivel" class="img-resp">
+        <img src="../Img/redes/Caritas-01.png" class="img-resp">
+      </div>
+      <!-- Texto -->
+      <div class="footer-texto">
+        <h2 class="txtre">YA NOS SIGUES</h2>
+        <h2 class="txtre">EN TODAS NUESTRAS REDES</h2>
+      </div><br>
+      <!-- Redes sociales -->
+      <div class="footer-redes">
+          <div class="icono-red">
+            <a href="https://www.instagram.com/elnivel_materiasprimas?igsh=MXcydzk4cmRrbDJmZA==">
+              <img src="../Img/redes/Cuadro Instagram-01.png" title="Instagram" class="imagen-recetasr">
+            </a>
+            <span class="texto-icono txtre">elnivel_materiasprimas</span>
+        </div>
+
+        <div class="icono-red">
+          <a href="https://www.facebook.com/share/1FQvprWTyh/">
+            <img src="../Img/redes/Cuadro face-01.png" title="Facebook" class="imagen-recetasr">
+          </a>
+          <span class="texto-icono txtre">EL NIVEL MATERIAS PRIMAS</span>
+        </div>
+
+        <div class="icono-red">
+          <a href="https://www.tiktok.com/@.elnivel?_t=ZS-8zfjT7k7BYN&_r=1">
+            <img src="../Img/redes/Cuadro Ti Tok-01.png" title="TikTok" class="imagen-recetasr">
+          </a>
+          <span class="texto-icono txtre">EL NIVEL, MATERIAS PRIMAS</span>
+        </div>
+
+        <div class="icono-red">
+          <a href="https://youtube.com/@elnivelmateriasprimas631?si=PanF5JVgsyFYVxmK">
+            <img src="../Img/redes/Cuadro Youtube-01.png" title="YouTube" class="imagen-recetasr">
+          </a>
+          <span class="texto-icono txtre">@elnivelmateriasprimas631</span>
+        </div>
+      </div>
+  </div>
+</footer>
+
+  <!-- Protección contra inspección -->
+  <script>
+    function borrarContenido() {
+      document.body.innerHTML = `
+       <div style="background-color: black; height: 170px; width: 400px; border-radius: 15px; justify-content: center;" class="container text-center my-4">
+            <h1 style="color: red; text-align: center; margin-top: 100px;">
+            ⚠️ Acceso Denegado
+            </h1>
+            <p style="text-align: center; color:white;">
+            Esta opcion No está permitido en este sitio.
+            </p>
+        </div>
+        <div class="text-center">  
+            <a href="../pages/catalogos.html" class="btn-atras">Regresar</a>
+        </div>`;
+    }
+    // Bloqueo de teclas (F12, Ctrl+Shift+I, Ctrl+U, etc.)
+    document.addEventListener('keydown', function (e) {
+      if (
+        e.key === "F12" || e.key === "F10" ||
+        (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) ||
+        (e.ctrlKey && e.key === "U")
+      ) {
+        e.preventDefault();
+        borrarContenido();
+        return false;
+      }
+    });
+    // Bloquear clic derecho
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+      borrarContenido();
+    });
+     // Bloquear Ctrl+U
+      document.addEventListener('keydown', function (e) {
+        if (e.ctrlKey && e.key.toLowerCase() === 'u') {
+          e.preventDefault();
+          borrarContenido();
+        }
+      });
+    // Detección continua de DevTools abiertos
+    setInterval(() => {
+      const threshold = 300;
+      if (
+        window.outerWidth - window.innerWidth > threshold ||
+        window.outerHeight - window.innerHeight > threshold
+      ) {
+        borrarContenido();
+      }
+    }, 1000);
+  </script>
+
+  <!-- Código JavaScript ofuscado -->
+  <script>
+    var _0x5a2d = ["\x61\x6C\x65\x72\x74", "\x48\x6F\x6C\x61\x2C\x20\x67\x72\x61\x63\x69\x61\x73\x20\x70\x6F\x72\x20\x76\x69\x73\x69\x74\x61\x72\x20\x6D\x69\x20\x73\x69\x74\x69\x6F\x2E"];
+    function saludar() {
+      window[_0x5a2d[0]](_0x5a2d[1]);
+    };
+  </script>
+
+    <script src="../JS/carta.js"></script>
+    <script src="../JS/script.js"></script>
+    <script src="../JS/box2.js"></script>
+</body>
+</html>
