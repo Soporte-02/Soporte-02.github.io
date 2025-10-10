@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" data-theme="light">
 <head>
-    <meta name="description" content="Materias primas el nivel">
+     <meta name="description" content="Materias primas el nivel">
     <meta name="keywords" content="Nivel, el nivel, El Nivel, Materias primas el nivel">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	  <script src="https://kit.fontawesome.com/181a7f6408.js" crossorigin="anonymous"></script>
@@ -14,15 +14,157 @@
     <link rel="stylesheet" type="text/css" href="CSS/index.css">
     <link rel="icon" href="Img/beeimgtmp-20250730-172830.png" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ 
+  <!--Dark-->
+  <style>
+         /* Variables de color (modo claro por defecto) */
+    :root{
+      --bg: #ffffff;
+      --text: #111827;
+      --card: #f8fafc;
+      --accent: #2563eb;
+      --muted: #6b7280;
+      --glass: rgba(0,0,0,0.04);
+      --transition: 250ms ease;
+    }
+
+    /* Modo oscuro */
+    :root[data-theme='dark']{
+      --bg: #0b1220;
+      --text: #e6eef8;
+      --card: #091021;
+      --accent: #60a5fa;
+      --muted: #9aa6b2;
+      --glass: rgba(255,255,255,0.03);
+    }
+
+    /* Tipografía y layout */
+    
+    body{
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      transition: background var(--transition), color var(--transition);
+    }
+
+   /* h1{font-size:1.25rem;margin:0}*/
+    p.lead{margin:6px 0 0;color:var(--muted)}
+
+    .card{
+      background:linear-gradient(180deg, var(--card), rgba(0,0,0,0));
+      border-radius:12px;
+      padding:18px;
+      box-shadow: 0 6px 18px rgba(2,6,23,0.08);
+      backdrop-filter: blur(6px);
+      transition: box-shadow var(--transition), background var(--transition);
+    }
+
+    /* Botón toggle */
+    .toggle-btn{
+      appearance:none;
+      border:0;
+      padding:8px 12px;
+      border-radius:999px;
+      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:var(--glass);
+      color:var(--text);
+      transition: transform 120ms ease, background var(--transition), color var(--transition);
+      font-weight:600;
+      font-size:0.95rem;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
    
+    .toggle-btn:active{transform:scale(0.98)}
+   
+        
+    /* claro*/
+    :root[data-theme='light'] .toggle-btn {
+       border:2px solid black;
+       background-color: white;
+    }
+
+        /*oscuro*/
+    :root[data-theme='dark'] .toggle-btn{
+        border:2px solid white;
+       background-color: black;
+    }
+    .moon{
+      width:18px;height:18px;display:inline-block;flex-shrink:0;
+    }
+
+    /* Ejemplo de contenido */
+    .grid{display:grid;grid-template-columns:1fr 280px;gap:14px;margin-top:14px}
+    .main{min-height:220px}
+    .sidebar{min-height:220px}
+
+    .card p{line-height:1.5;color:var(--muted)}
+
+    /* Pequeñas adaptaciones responsive */
+    @media (max-width:720px){
+      .grid{grid-template-columns:1fr;}
+    }
+
+    
+    /* Fondo modo claro */
+/*body {
+  background: var(--bg) url('../TI_web/img/day.gif') 
+              no-repeat center center fixed;
+  background-size: cover;
+  transition: background 0.6s ease, color 0.6s ease;
+}
+
+:root[data-theme='dark'] body {
+  background: var(--bg) url('../TI_web/img/not.gif') 
+              no-repeat center center fixed;
+  background-size: cover;
+}*/
+
+    body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: #0074C7; /* capa clara */
+  z-index: -1;
+  transition: background 0.6s ease;
+}
+
+:root[data-theme='dark'] body::before {
+  background: #001d3b; /* capa oscura */
+}
+
+:root[data-theme='dark'] .dini{
+       background-color: rgb(95, 3, 3);
+    }
+
+
+
+
+  </style>
 </head>
-<body class="bodyini">
-   
+
+ <body class="bodyini">
+    <header>
         <div class="dini">
             <center>
                 <img src="Img/Logotipo El Nivel blanco-01.png" height="120px" width="120px" class="imini">
             </center>
         </div><br>
+        <div class="container">     
+            <button id="themeToggle" class="toggle-btn" aria-pressed="false" title="Alternar modo claro/oscuro">
+                <svg class="moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span id="toggleLabel">Modo nocturno</span>
+            </button>
+        </div> 
+    </header>
 
             <center>
                 <section>
@@ -40,7 +182,7 @@
                         <h3 class="ih32">311 114 54-66</h3>
                     </div><br>
                 <button class="ab"><a href="https://api.whatsapp.com/send/?phone=523111145466&text&type=phone_number&app_absent=0" target="_blank">Haz clic aqui, para realizar tú pedido</a></button>
-            </center><br><br><br><br><br>
+            </center><br><br><br><br><br><br>
             
     <footer>
         <section class="fs">
@@ -87,9 +229,7 @@
               '_blank'
             );
       });
-      /*document.getElementById('btnContacto').addEventListener('click', () => {
-        window.location.href = 'https://api.whatsapp.com/send/?phone=523111145466&text&type=phone_number&app_absent=0';
-      });*/
+
       document.getElementById('btnCancelar').addEventListener('click', () => {
         Swal.close();
       });
@@ -162,5 +302,85 @@
     <script src="../JS/carta.js"></script>
     <script src="../JS/script.js"></script>
     <script src="../JS/box.js"></script>
+
+
+  <!--DARK-->
+ <script>
+    function toggleTheme() {
+      const root = document.documentElement;
+      const currentTheme = root.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', newTheme);
+    }
+
+    (function(){
+      const root = document.documentElement;
+      const toggle = document.getElementById('themeToggle');
+      const label = document.getElementById('toggleLabel');
+      const storageKey = 'theme-preference';
+
+      // Devuelve 'dark' o 'light'
+      function getStoredPreference(){
+        try{ return localStorage.getItem(storageKey); }catch(e){ return null; }
+      }
+
+      // Detecta preferencia del sistema
+      function getSystemPreference(){
+        return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+
+      function applyTheme(theme){
+        if(theme === 'dark'){
+          root.setAttribute('data-theme','dark');
+          toggle.setAttribute('aria-pressed','true');
+          label.textContent = 'Modo claro';
+        }else{
+          root.setAttribute('data-theme','light');
+          toggle.setAttribute('aria-pressed','false');
+          label.textContent = 'Modo nocturno';
+        }
+      }
+
+      function savePreference(theme){
+        try{ localStorage.setItem(storageKey, theme); }catch(e){/* silenciar si el almacenamiento falla */}
+      }
+
+      // Inicialización: preferencia almacenada > preferencia del sistema > claro
+      const stored = getStoredPreference();
+      const initial = stored || getSystemPreference() || 'light';
+      applyTheme(initial);
+
+      // Listener del botón
+      toggle.addEventListener('click', () => {
+        const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+        const next = current === 'dark' ? 'light' : 'dark';
+        applyTheme(next);
+        savePreference(next);
+      });
+
+      // Soporte para atajo de teclado: tecla D
+      window.addEventListener('keydown', (e) => {
+        if(e.key.toLowerCase() === 'd' && !e.metaKey && !e.ctrlKey && !e.altKey){
+          e.preventDefault();
+          toggle.click();
+        }
+      });
+
+      // Si el usuario cambia la preferencia del sistema en tiempo real, puede respetarse
+      if(window.matchMedia){
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+          // Si el usuario ya guardó una preferencia, no sobrescribimos
+          if(getStoredPreference()) return;
+          applyTheme(e.matches ? 'dark' : 'light');
+        });
+      }
+
+    })();
+  </script>
+
+
 </body>
 </html>
+
+
+ 

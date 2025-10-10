@@ -1,0 +1,1359 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <style>
+      body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+     .product-card {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      position: relative;
+      height: 100%;
+      transition: transform 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      filter: drop-shadow(2px 3px 20px rgb(26, 26, 26)); 
+    }
+
+    .product-card img {
+      width: 100%;
+      max-height: 150px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .product-title {
+      font-size: 16px;
+      margin-bottom: 5px;
+      color: #007bff;
+      font-family: Cormorant Garamond;
+      font-size: 40px;
+    }
+
+    .product-price {
+      font-size: 18px;
+      color: #007bff;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .add-to-cart {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 14px;
+      width: 500px;
+      height: 50px;
+    }
+    .add-to-cart:hover{
+      background-color: #0162c9;
+    }
+
+    .product-icons {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .product-icons i {
+      cursor: pointer;
+      color: #007bff;
+      font-size: 18px;
+    }
+
+    .like-icon.liked {
+      color: red;
+    }
+     .product-card img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+   
+
+    .product-price {
+      font-weight: bold;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    .add-to-cart {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .cart-container {
+      max-width: 600px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .cart-container h2 {
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .remove-btn {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 5px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .clear-cart {
+      margin-top: 15px;
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .total {
+      font-size: 18px;
+      text-align: right;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .btti{
+    background-color: #2c32e4;
+    color: white;
+    border-radius: 10px;
+    width: 150px;
+    height: 45px;
+    }
+
+.cart-icon .ppvr {
+  position: relative;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cart-icon .ppvr:hover {
+  background-color: #f1f1f1;
+}
+
+.cart-icon i {
+  color: #007bff;
+  font-size: 20px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+  </style>
+  </style>
+     <!-- ✅ Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ✅ FontAwesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!--otro mas-->
+<style>
+    body {
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    .product-container {
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .main-image img {
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: 2px solid #ccc;
+    }
+
+    .color-name, .size-label, .weight-label, .selected-options {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .thumbnails {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .thumbnail {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      border-radius: 5px;
+      transition: border 0.2s ease;
+    }
+
+    .thumbnail.active {
+      border: 2px solid #0078D7;
+    }
+    .active:hover{
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .options {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+
+    .option {
+      padding: 8px 14px;
+      border: 2px solid #ccc;
+      background-color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: all 0.2s ease;
+    }
+
+    .option:hover {
+      border-color: #0078D7;
+    }
+
+    .option.active {
+      background-color: #0078D7;
+      color: white;
+      border-color: #0078D7;
+    }
+
+    .selected-options {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+  <style>
+      body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+     .product-card {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      position: relative;
+      height: 100%;
+      transition: transform 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      filter: drop-shadow(2px 3px 20px rgb(26, 26, 26)); 
+    }
+
+    .product-card img {
+      width: 100%;
+      max-height: 150px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+    .product-price {
+      font-size: 18px;
+      color: #007bff;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .add-to-cart {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .product-icons {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .product-icons i {
+      cursor: pointer;
+      color: #007bff;
+      font-size: 18px;
+    }
+
+    .like-icon.liked {
+      color: red;
+    }
+     .product-card img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+
+
+    .product-price {
+      font-weight: bold;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    .add-to-cart {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .cart-container {
+      max-width: 600px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .cart-container h2 {
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .remove-btn {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 5px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .clear-cart {
+      margin-top: 15px;
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .total {
+      font-size: 18px;
+      text-align: right;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .btti{
+    background-color: #2c32e4;
+    color: white;
+    border-radius: 10px;
+    width: 150px;
+    height: 45px;
+    }
+
+.cart-icon .ppvr {
+  position: relative;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cart-icon .ppvr:hover {
+  background-color: #f1f1f1;
+}
+
+.cart-icon i {
+  color: #007bff;
+  font-size: 20px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+  </style>
+  <meta charset="UTF-8">
+  <title>index</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    .product-container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+      position: relative;
+    background: #fff;
+  
+    }
+     .product-container:hover {
+      transform: translateY(-5px);
+      filter: drop-shadow(2px 3px 20px rgb(26, 26, 26)); 
+    }
+
+    .main-image img {
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: 2px solid #ccc;
+    }
+
+    .color-name, .size-label, .weight-label, .selected-options {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .thumbnails {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .thumbnail {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      border-radius: 5px;
+      transition: border 0.2s ease;
+    }
+
+    .thumbnail.active {
+      border: 2px solid #0078D7;
+    }
+
+    .options {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+
+    .option {
+      padding: 8px 14px;
+      border: 2px solid #ccc;
+      background-color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: all 0.2s ease;
+    }
+
+    .option:hover {
+      border-color: #0078D7;
+    }
+
+    .option.active {
+      background-color: #0078D7;
+      color: white;
+      border-color: #0078D7;
+    }
+
+    .selected-options {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+  <style>
+      body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+     
+
+    .remove-btn {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 5px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .clear-cart {
+      margin-top: 15px;
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .total {
+      font-size: 18px;
+      text-align: right;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .btti{
+    background-color: #2c32e4;
+    color: white;
+    border-radius: 10px;
+    width: 150px;
+    height: 45px;
+    }
+
+.cart-icon .ppvr {
+  position: relative;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.cart-icon .ppvr:hover {
+  background-color: #f1f1f1;
+}
+
+.cart-icon i {
+  color: #007bff;
+  font-size: 20px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* 💖 ICONOS */
+.product-icons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.product-icons i {
+  font-size: 18px;
+  color: #555;
+  background: rgba(255,255,255,0.85);
+  padding: 6px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.product-icons i:hover {
+  color: #e63946;
+  background: #fff;
+  transform: scale(1.15);
+}
+
+/* 🔘 Íconos en esquina superior derecha */
+
+.product-icons {
+      position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    gap: 10px;
+    }
+
+    .product-icons i {
+    color: #007bff;
+    cursor: pointer;
+    font-size: 18px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    }
+
+    .product-icons i.liked {
+      color: red;
+    }
+
+.icon-btn:hover {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+
+/* Miniaturas */
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 10px;
+}
+.thumbnails img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.thumbnails img.active {
+  border-color: #007bff;
+}
+ .add-to-cart {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      font-family: Cormorant Garamond;
+    }
+th, td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+#modal:popover-open{
+border-radius: 15px;
+}
+@media(max-width: 600px) {
+  #modal:popover-open{
+    max-width: 450px;
+    max-height: 600px;
+}
+}
+/* 🧁 Estilo del Toast */
+#toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #323232;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 14px;
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  z-index: 9999;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+#toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+  </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <!-- ✅ Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ✅ FontAwesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <h1>Mi Tienda</h1>
+    <div class="cart-icon">
+        <button popovertarget="modal" class="ppvr">
+            <i class="fas fa-shopping-cart"></i>
+            <div class="cart-count" id="cartCount">0</div>
+        </button>
+    </div>
+  </header>
+
+
+ <section class="container my-3">
+  <div class="row justify-content-center">
+
+    <!-- Producto 1 -->
+    <div class="product-container">
+       <div class="product-title">Colorante</div>
+      <div class="main-image">
+        <img class="mainProductImage" src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/img/marcador-de-posicion.png?raw=true" alt="Producto blanco">
+        <div class="product-icons">
+          <i class="far fa-heart like-icon" data-id="producto-1"></i>
+          <i class="fas fa-share-alt share-icon"></i>
+        </div>
+        <div class="product-price">Precio: $30.00</div>
+      </div>
+      <div class="color-name">Color: Robot white</div>
+
+      <div class="thumbnails">
+        <img class="thumbnail active"
+          src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/img/mexico.gif?raw=true"
+          data-image="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/img/mexico.gif?raw=true"
+          data-color="Robot white"
+          data-costo="30.00"
+          alt="Robot white">
+
+        <img class="thumbnail"
+          src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/img/marcador-de-posicion.png?raw=true"
+          data-image="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/img/marcador-de-posicion.png?raw=true"
+          data-color="Pulse Red"
+          data-costo="35.00"
+          alt="Rojo">
+
+        <img class="thumbnail"
+          src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/img/ni%C3%B1oo.gif?raw=true"
+          data-image="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/img/ni%C3%B1oo.gif?raw=true"
+          data-color="Shock Blue"
+          data-costo="20.00"
+          alt="Azul">
+
+        <img class="thumbnail"
+          src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/img/haloweenn.gif?raw=true"
+          data-image="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/img/haloweenn.gif?raw=true"
+          data-color="Deep Pink"
+          data-costo="30.50"
+          alt="Rosa">
+      </div>
+
+      <!-- TAMAÑOS -->
+      <div class="size-label">Tamaño:</div>
+      <div class="options sizeOptions">
+        <div class="option active" data-size="Chico">Chico</div>
+        <div class="option" data-size="Mediano">Mediano</div>
+        <div class="option" data-size="Grande">Grande</div>
+        <div class="option" data-size="Extra Grande">Extra Grande</div>
+      </div>
+
+      <!-- PESO -->
+      <div class="weight-label">Peso:</div>
+      <div class="options weightOptions">
+        <div class="option active" data-weight="1KG">1KG</div>
+        <div class="option" data-weight="5KG">5KG</div>
+        <div class="option" data-weight="10KG">10KG</div>
+        <div class="option" data-weight="20KG">20KG</div>
+      </div>
+
+      <!-- Mostrar selección final -->
+      <div class="selected-options selectedInfo">
+        Seleccionaste: Tamaño Chico, Peso 1KG
+      </div>
+
+      <!-- Botón Agregar al carrito -->
+      <button class="add-to-cart fas fa-shopping-cart" onclick="addToCart(event)">Agregar al carrito</button>
+    </div>
+
+     <!-- Producto 2 -->
+    <div class="product-container">
+      <!-- Imagen Principal -->
+       <div class="product-title">Capacillos</div>
+      <div class="main-image">
+        <img class="mainProductImage" src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/img/mexico.gif?raw=true" alt="Producto blanco">
+        <div class="product-icons">
+          <i class="far fa-heart like-icon" data-id="producto-2"></i>
+          <i class="fas fa-share-alt share-icon"></i>
+        </div>
+        <div class="product-price">Precio: $30.00</div>
+      </div>
+      <!-- Nombre del Color Seleccionado -->
+      <div class="color-name">Color: Robot white</div>
+
+      <!-- Miniaturas de Colores -->
+      <div class="thumbnails">
+        <img class="thumbnail active"
+          src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/img/mexico.gif?raw=true"
+          data-image="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/img/mexico.gif?raw=true"
+          data-color="Robot white"
+          data-costo="30.00"
+          alt="Robot white">
+
+        <img class="thumbnail"
+          src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/img/marcador-de-posicion.png?raw=true"
+          data-image="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/img/marcador-de-posicion.png?raw=true"
+          data-color="Pulse Red"
+          data-costo="35.00"
+          alt="Rojo">
+
+        <img class="thumbnail"
+          src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/img/ni%C3%B1oo.gif?raw=true"
+          data-image="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/img/ni%C3%B1oo.gif?raw=true"
+          data-color="Shock Blue"
+          data-costo="20.00"
+          alt="Azul">
+
+        <img class="thumbnail"
+          src="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/img/haloweenn.gif?raw=true"
+          data-image="https://github.com/Soporte-02/Portadas-y-recetas/blob/main/img/haloweenn.gif?raw=true"
+          data-color="Deep Pink"
+          data-costo="30.50"
+          alt="Rosa">
+      </div>
+
+      <!-- TAMAÑOS -->
+      <div class="size-label">Tamaño:</div>
+      <div class="options sizeOptions">
+        <div class="option active" data-size="Chico">Chico</div>
+        <div class="option" data-size="Mediano">Mediano</div>
+        <div class="option" data-size="Grande">Grande</div>
+        <div class="option" data-size="Extra Grande">Extra Grande</div>
+      </div>
+
+      <!-- PESO -->
+      <div class="weight-label">Peso:</div>
+      <div class="options weightOptions">
+        <div class="option active" data-weight="1KG">1KG</div>
+        <div class="option" data-weight="5KG">5KG</div>
+        <div class="option" data-weight="10KG">10KG</div>
+        <div class="option" data-weight="20KG">20KG</div>
+      </div>
+
+      <!-- Mostrar selección final -->
+      <div class="selected-options selectedInfo">
+        Seleccionaste: Tamaño Chico, Peso 1KG
+      </div>
+
+
+      <!-- Botón Agregar al carrito -->
+      <button class="add-to-cart fas fa-shopping-cart" onclick="addToCart(event)">Agregar al carrito</button>
+    </div>
+
+  </div>
+</section>
+
+
+
+        <div id="modal" popover>
+    <!-- 🛒 Carrito -->
+    <div class="cart-container" id="cartContainer" style="display: none;">
+        <h2>Carrito de Compras</h2>
+        <table id="cartTable">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Color</th>
+                    <th>Tamaño</th>
+                    <th>Peso</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div class="total" id="cartTotal">Total: $0.00</div>
+        <button class="clear-cart" onclick="clearCart()">Vaciar carrito</button>
+    </div>
+    <center>
+        <button popovertarget="modal" class="btti">Cerrar</button>                       
+    </center>
+</div>
+
+</div>
+      
+  <script>
+    // ❤️ Like (me gusta)
+  /*document.querySelectorAll('.like-icon').forEach(icon => {
+    icon.addEventListener('click', () => {
+      icon.classList.toggle('liked');
+      icon.classList.toggle('far');
+      icon.classList.toggle('fas');
+    });
+  });*/
+  // Cargar estado de likes desde localStorage
+    document.addEventListener("DOMContentLoaded", () => {
+    const likedItems = JSON.parse(localStorage.getItem("likedItems")) || {};
+    const allLikeIcons = document.querySelectorAll(".like-icon");
+    const likedContainer = document.getElementById("likedProductsContainer");
+
+    // 1. Activar corazones si ya estaban marcados
+    allLikeIcons.forEach(icon => {
+        const id = icon.dataset.id;
+        if (likedItems[id]) {
+            icon.classList.add("liked", "fas");
+            icon.classList.remove("far");
+        }
+
+        // 2. Escuchar clics en los corazones
+        icon.addEventListener("click", () => {
+            const isLiked = icon.classList.toggle("liked");
+            icon.classList.toggle("fas", isLiked);
+            icon.classList.toggle("far", !isLiked);
+
+            likedItems[icon.dataset.id] = isLiked;
+            localStorage.setItem("likedItems", JSON.stringify(likedItems));
+
+            updateLikedSection();
+        });
+    });
+
+   // 3. Mostrar productos favoritos
+    function updateLikedSection() {
+        likedContainer.innerHTML = ""; // Limpiar favoritos
+
+        Object.keys(likedItems).forEach(id => {
+            if (likedItems[id]) {
+                const productCard = document.getElementById(id);
+                if (productCard) {
+                    const clone = productCard.cloneNode(true);
+                    const iconClone = clone.querySelector(".like-icon");
+
+                    // Listener para quitar desde favoritos
+                    iconClone.addEventListener("click", () => {
+                        delete likedItems[id];
+                        localStorage.setItem("likedItems", JSON.stringify(likedItems));
+
+                        // ✅ Buscar y actualizar el ícono original con el mismo data-id
+                        const originalIcons = document.querySelectorAll(`.like-icon[data-id='${id}']`);
+                        originalIcons.forEach(originalIcon => {
+                            originalIcon.classList.remove("liked", "fas");
+                            originalIcon.classList.add("far");
+                        });
+
+                        updateLikedSection(); // Actualizar sección
+                    });
+
+                    likedContainer.appendChild(clone);
+                }
+            }
+        });
+    }
+
+    updateLikedSection(); // Mostrar favoritos al cargar
+});
+
+  // Compartir
+  document.querySelectorAll('.share-icon').forEach(icon => {
+    icon.addEventListener('click', async () => {
+      const url = window.location.href;
+
+      if (navigator.share) {
+        try {
+          await navigator.share({
+            title: document.title,
+            text: '¡Mira este producto!',
+            url: url,
+          });
+        } catch (error) {
+          console.error('Error al compartir:', error);
+        }
+      } else if (navigator.clipboard) {
+        try {
+          await navigator.clipboard.writeText(url);
+          alert('¡Enlace copiado al portapapeles!');
+        } catch (err) {
+          alert('No se pudo copiar el enlace');
+        }
+      } else {
+        alert('Tu navegador no admite compartir enlaces.');
+      }
+    });
+  });
+
+  </script>
+
+  <!--Carrito carta 2 -->
+  <script>
+   let cart = [];
+
+// Recuperar carrito guardado (idem, no cambié)
+window.addEventListener('DOMContentLoaded', () => {
+  const storedCart = localStorage.getItem('cart');
+  if (storedCart) {
+    cart = JSON.parse(storedCart);
+    updateCartDisplay();
+  }
+});
+
+// Variables globales no las usaremos, pues hay múltiples productos,
+// así que manejaremos todo dentro de cada producto usando el botón clickeado
+
+// Cambiar imagen, color y costo (para todos los productos)
+document.querySelectorAll('.product-container').forEach(container => {
+  const thumbnails = container.querySelectorAll('.thumbnail');
+  const mainImage = container.querySelector('.mainProductImage');
+  const colorName = container.querySelector('.color-name');
+  const priceElement = container.querySelector('.product-price');
+  const sizeOptions = container.querySelectorAll('.sizeOptions .option');
+  const weightOptions = container.querySelectorAll('.weightOptions .option');
+  const selectedInfo = container.querySelector('.selectedInfo');
+
+  let selectedSize = "Chico";
+  let selectedWeight = "1KG";
+
+  thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('click', () => {
+      const imageSrc = thumbnail.getAttribute('data-image');
+      const color = thumbnail.getAttribute('data-color');
+      const costo = thumbnail.getAttribute('data-costo');
+
+      mainImage.src = imageSrc;
+      colorName.textContent = 'Color: ' + color;
+      priceElement.textContent = 'Precio: $' + costo;
+
+      thumbnails.forEach(t => t.classList.remove('active'));
+      thumbnail.classList.add('active');
+    });
+  });
+
+  sizeOptions.forEach(option => {
+    option.addEventListener('click', () => {
+      sizeOptions.forEach(o => o.classList.remove('active'));
+      option.classList.add('active');
+      selectedSize = option.getAttribute('data-size');
+      updateSelectedInfo();
+    });
+  });
+
+  weightOptions.forEach(option => {
+    option.addEventListener('click', () => {
+      weightOptions.forEach(o => o.classList.remove('active'));
+      option.classList.add('active');
+      selectedWeight = option.getAttribute('data-weight');
+      updateSelectedInfo();
+    });
+  });
+
+  function updateSelectedInfo() {
+    selectedInfo.textContent = `Seleccionaste: Tamaño ${selectedSize}, Peso ${selectedWeight}`;
+  }
+
+  updateSelectedInfo();
+
+  // Aquí no agregamos el evento al botón porque los botones pueden ser muchos.
+  // Mejor dejamos que el botón tenga onclick="addToCart(event)" y lo capturamos globalmente.
+});
+
+// Ahora la función addToCart que usa el botón clickeado para encontrar su producto:
+
+function addToCart(event) {
+  // El botón clickeado
+  const btn = event.currentTarget;
+  // Buscar el contenedor padre más cercano del producto
+  const container = btn.closest('.product-container');
+
+  // Obtener datos del producto dentro de ese contenedor
+  const name = container.querySelector('.product-title')?.textContent.trim() || 'Producto sin nombre'
+  const priceElement = container.querySelector('.product-price');
+  const priceText = priceElement.textContent.replace('Precio: $', '');
+  const price = parseFloat(priceText);
+
+  const colorName = container.querySelector('.color-name');
+  const color = colorName.textContent.replace('Color: ', '');
+
+  const mainImage = container.querySelector('.mainProductImage');
+  const image = mainImage.src;
+
+  const selectedInfo = container.querySelector('.selectedInfo');
+  // Para extraer tamaño y peso del texto o mejor:
+  const sizeOptions = container.querySelectorAll('.sizeOptions .option');
+  const weightOptions = container.querySelectorAll('.weightOptions .option');
+
+  let selectedSize = 'Chico';
+  sizeOptions.forEach(o => {
+    if (o.classList.contains('active')) selectedSize = o.getAttribute('data-size');
+  });
+
+  let selectedWeight = '1KG';
+  weightOptions.forEach(o => {
+    if (o.classList.contains('active')) selectedWeight = o.getAttribute('data-weight');
+  });
+
+  // Buscar si ya existe en carrito
+  const existing = cart.find(item =>
+    item.name === name &&
+    item.color === color &&
+    item.size === selectedSize &&
+    item.weight === selectedWeight
+  );
+
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    cart.push({
+      name,
+      price,
+      quantity: 1,
+      color,
+      size: selectedSize,
+      weight: selectedWeight,
+      image
+    });
+  }
+
+  updateCartDisplay();
+  showToast(`🛒 ${name} agregado al carrito`);
+}
+
+// Función para mostrar el Toast
+function showToast(message) {
+  // Crear el contenedor si no existe
+  let toast = document.getElementById('toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'toast';
+    document.body.appendChild(toast);
+  }
+
+  toast.textContent = message;
+  toast.classList.add('show');
+
+  // Ocultar después de 3 segundos
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 3000);
+}
+/******************/
+
+// Aumentar cantidad
+function increaseQuantity(index) {
+  cart[index].quantity += 1;
+  updateCartDisplay();
+}
+
+// ➖ Disminuir cantidad
+function decreaseQuantity(index) {
+  if (cart[index].quantity > 1) {
+    cart[index].quantity -= 1;
+  } else {
+    // Si la cantidad es 1 y se presiona "-", eliminar el producto
+    cart.splice(index, 1);
+  }
+  updateCartDisplay();
+}
+
+// Eliminar ítem directamente
+function removeItem(index) {
+  cart.splice(index, 1);
+  updateCartDisplay();
+}
+
+//Vaciar carrito
+function clearCart() {
+  cart = [];
+  updateCartDisplay();
+}
+
+// Actualizar carrito
+function updateCartDisplay() {
+  const tableBody = document.querySelector('#cartTable tbody');
+  const cartContainer = document.getElementById('cartContainer');
+  const cartCount = document.getElementById('cartCount');
+  const cartTotal = document.getElementById('cartTotal');
+
+  tableBody.innerHTML = '';
+  let totalItems = 0;
+  let totalPrice = 0;
+
+  if (cart.length === 0) {
+    cartContainer.style.display = 'none';
+    if (cartCount) cartCount.textContent = 0;
+    localStorage.removeItem('cart');
+    return;
+  }
+
+  cartContainer.style.display = 'block';
+
+  cart.forEach((item, index) => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${item.name}</td>
+      <td>${item.color}</td>
+      <td>${item.size}</td>
+      <td>${item.weight}</td>
+      <td>
+        <button onclick="decreaseQuantity(${index})">-</button>
+        <span>${item.quantity}</span>
+        <button onclick="increaseQuantity(${index})">+</button>
+      </td>
+      <td>$${(item.price * item.quantity).toFixed(2)}</td>
+      <td><button class="remove-btn" onclick="removeItem(${index})">X</button></td>
+    `;
+    tableBody.appendChild(row);
+
+    totalItems += item.quantity;
+    totalPrice += item.price * item.quantity;
+  });
+
+  if (cartCount) cartCount.textContent = totalItems;
+  cartTotal.textContent = `Total: $${totalPrice.toFixed(2)}`;
+
+  // Guardar en localStorage
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+  </script>
+
+
+</body>
+</html>
+

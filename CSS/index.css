@@ -432,7 +432,7 @@ main{
     font-size: 50px;
 }
 .bodyini{
-    background-color: #0074C7;
+    background-color: #0074C7 !important;
 }
 .dini{
     background-color: #eb4242;
@@ -1269,5 +1269,33 @@ background-color: white;
         /*linear-gradient(transparent, transparent),*/
         linear-gradient(rgba(41, 41, 41, 0.8), transparent),
         url('../Img/mamá.gif') center center / cover no-repeat;
+  }
+}
+
+/*verano*/
+.verano{
+  height: 300px;
+  width: 300px;
+  background-color: #dedede;
+    border-radius: 15px;
+}
+.bodyverano{
+    background-image: url('../Img/veranof.png'); /* Ruta a tu imagen */
+    background-repeat: no-repeat; /* No repite la imagen */
+    background-size: cover; /* La imagen cubre todo el elemento */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+}
+.verano:hover{
+    background: 
+        linear-gradient(rgba(41, 41, 41, 0.8), transparent),
+        url('../Img') center center / cover no-repeat;
+}
+@media (max-width: 480px) {
+  .verano {
+      background: 
+        /*linear-gradient(transparent, transparent),*/
+        linear-gradient(rgba(41, 41, 41, 0.8), transparent),
+        url('../Img') center center / cover no-repeat;
   }
 }

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Producto Interactivo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cart-icon {
+      position: relative;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .cart-count {
+      position: absolute;
+      top: -8px;
+      right: -10px;
+      background-color: red;
+      color: white;
+      font-size: 12px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .product-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      width: 200px;
+      text-align: center;
+      position: relative;
+    }
+
+    .product-icons {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      gap: 8px;
+    }
+
+    .product-icons i {
+      color: #007bff;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .product-icons i.liked {
+      color: red;
+    }
+
+    .product-image img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .product-title {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .product-price {
+      font-size: 18px;
+      color: #007bff;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .add-to-cart {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.3s ease;
+    }
+
+    .add-to-cart:hover {
+      background-color: #0056b3;
+    }
+
+    .message {
+      text-align: center;
+      margin-top: 20px;
+      color: green;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔝 Header con ícono de carrito -->
+  <header>
+    <h1>Tienda</h1>
+    <div class="cart-icon">
+      <i class="fas fa-shopping-cart"></i>
+      <div class="cart-count" id="cartCount">0</div>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- 🧁 Tarjeta de producto -->
+    <div class="product-card">
+      <div class="product-icons">
+        <i class="far fa-heart" id="likeIcon"></i>
+        <i class="fas fa-share-alt" id="shareIcon"></i>
+      </div>
+      <div class="product-image">
+        <img src="../Img/Icono Pastel-01.png" alt="Cobertura Dolcezza">
+      </div>
+      <div class="product-title">Cobertura dolcezza pastel 1kg</div>
+      <div class="product-price">$139.75</div>
+      <button class="add-to-cart" id="addToCartBtn">
+        <i class="fas fa-shopping-cart"></i> Agregar al carrito
+      </button>
+    </div>
+  </div>
+
+  <div class="message" id="message">¡Link copiado al portapapeles!</div>
+
+  <script>
+    // ❤️ Me gusta
+    const likeIcon = document.getElementById('likeIcon');
+    likeIcon.addEventListener('click', () => {
+      likeIcon.classList.toggle('liked');
+      likeIcon.classList.toggle('far');
+      likeIcon.classList.toggle('fas');
+    });
+
+    // 🛒 Carrito
+    const addToCartBtn = document.getElementById('addToCartBtn');
+    const cartCount = document.getElementById('cartCount');
+    let cartItems = 0;
+
+    addToCartBtn.addEventListener('click', () => {
+      cartItems++;
+      cartCount.textContent = cartItems;
+    });
+
+    // 🔗 Compartir
+    const shareIcon = document.getElementById('shareIcon');
+    const message = document.getElementById('message');
+
+    shareIcon.addEventListener('click', async () => {
+      const url = window.location.href;
+
+      if (navigator.share) {
+        try {
+          await navigator.share({
+            title: document.title,
+            text: '¡Mira este producto!',
+            url: url,
+          });
+        } catch (error) {
+          console.error('Error al compartir:', error);
+        }
+      } else if (navigator.clipboard) {
+        try {
+          await navigator.clipboard.writeText(url);
+          message.style.display = 'block';
+          setTimeout(() => {
+            message.style.display = 'none';
+          }, 2000);
+        } catch (err) {
+          alert('No se pudo copiar el enlace');
+        }
+      } else {
+        alert('Tu navegador no admite compartir enlaces.');
+      }
+    });
+  </script>
+
+</body>
+</html>

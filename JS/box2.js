@@ -11,17 +11,17 @@ document.addEventListener('DOMContentLoaded', function () {
             const searchTerm = searchInput.value.toLowerCase().trim();
 
             const productIds = [
-                'Dia-dia-del niño-del-niño-niños',
+                'Dia-dia-del niño-del-niño-niños-dia del niño',
                 'Capacillo-Capacillos-capacillo-capacillos',
                 'Utensilios-utensilios',
                 'Letreros-letreros',
                 'Decoracion-decoracion-Decoración-decoración',
                 'Electrodomesticos-electrodomesticos',
-                'Colorantes-colorantes',
+                'Colorantes-colorantes-colorante-Colorante',
                 'Moldes-moldes-Molde-molde',
                 'Otoño-otoño',
                 'Primavera-primavera',
-                'Fiestas-Patrias-fiesta-patria-Mexico-mexico',
+                'Fiestas-Patrias-fiesta-patria-Mexico-mexico-fiestas patrias',
                 'Dia-San-Valentin-dia-san-valentin',
                 'Dia-De-Muertos-dia-de-muertos',
                 'Dia-de las-Madres-dia-de-las-madres',
@@ -34,6 +34,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 'Platos-platos-Desechables-desechables',
                 'Quimicos-quimicos',
                 'Materias-Primas-materias-primas',
+                'Resposteria-reposteria',
+                'Jarabe-Monin-jarabe-monin',
                 '',
             ];
 
