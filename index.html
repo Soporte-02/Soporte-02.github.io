@@ -142,7 +142,11 @@
 :root[data-theme='dark'] .dini{
        background-color: rgb(95, 3, 3);
     }
-
+@media (max-width: 500px) {
+  #toggleLabel {
+    display: none;
+  }
+}
 
 
 
@@ -239,7 +243,7 @@
   return false;
 }
 </script>
-  <script>
+  <!--script>
     // Borrar contenido si se detecta DevTools
     function borrarContenido() {
       document.body.innerHTML = `
@@ -297,7 +301,7 @@
     function saludar() {
       window[_0x5a2d[0]](_0x5a2d[1]);
     };
-  </script>
+  </script-->
 
     <script src="../JS/carta.js"></script>
     <script src="../JS/script.js"></script>
